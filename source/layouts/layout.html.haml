@@ -1,0 +1,52 @@
+!!!
+/[if lt IE 7 ] <html class="ie ie6" lang="en">
+/[if IE 7 ] <html class="ie ie7" lang="en">
+/[if IE 8 ] <html class="ie ie8" lang="en">
+/ [if (gte IE 9)|!(IE)]><!
+%html{:lang => "en"}
+  / <![endif]
+  %head
+    - if build?
+      = javascript_include_tag "//cdn.optimizely.com/js/2223003354.js"
+    %meta{:charset => "utf-8"}/
+    %title OutreachPro: Warm Up Your Cold Email
+    %meta{:content => "octaviuslabs llc", :name => "author"}/
+    %meta{:content => "email outreach program, email outreach, email outreach examples, email outreach template, email outreach tools, email outreach software, email outreach quicksprout, email outreach specialist, seo email outreach, bulk email outreach, email outreach program, email outreach examples, email outreach template, email outreach tools, email outreach software, email outreach quicksprout, email outreach, email outreach specialist, seo email outreach, bulk email outreach, bulk email outreach, cardon outreach email, carolina outreach email, cold outreach email, campus outreach email, customer outreach email, email outreach examples, blogger outreach email example, outreach email subject line, email outreach program, email outreach quicksprout, email outreach software, email outreach specialist, outreach email sample, outreach email subject line, seo email outreach, email outreach template, email outreach tools, blogger outreach email template", :name => "keywords"}/
+    %meta{:content => "OutreachPro: Warm Up Your Cold Email", :name => "description"}/
+
+    / Mobile Specific Metas
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}/
+    = stylesheet_link_tag "base"
+    = partial "layouts/header_icons" 
+
+    / Google Fonts
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,800italic,800,700italic,700,600italic,600,400italic,300"
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Oswald:400,300,700"
+
+  %body
+    - if build?
+      = partial "layouts/top_body_scripts"
+    = partial "layouts/header"
+    #content_wrapper
+      = yield
+    = partial "layouts/footer" 
+    = javascript_include_tag "all"
+    / /[if lt IE 9]
+    /   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    /   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    - if build?
+      :javascript
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-57357039-1', 'auto');
+        ga('send', 'pageview');
+      = javascript_include_tag "vimeo.ga"
+      = javascript_include_tag "jquery.scrolldepth.min"
+      :javascript
+        smoothScroll.init();
+        jQuery(function() {
+          jQuery.scrollDepth();
+        });

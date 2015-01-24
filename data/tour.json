@@ -1,0 +1,32 @@
+{
+  "sections": [
+    {
+      "title": "The Art Of The One Handed Email",
+      "image": "animations/template_wireframe.png",
+      "text": "Pellentesque sapien purus, sagittis eu accumsan convallis, vehicula ut lectus. Fusce accumsan purus pretium ligula vehicula, ut interdum nisl vulputate. Vivamus ultrices luctus quam eu feugiat. Nunc sagittis odio eget odio laoreet mollis. Nullam rutrum blandit convallis. Maecenas id nisi eget nunc convallis consectetur nec sed nibh. Mauris in gravida",
+      "next_item": "#analytics",
+      "next_text": "Rich Profiles"
+    },
+    {
+      "title": "Know Who Is Likely To Buy",
+      "image": "animations/template_wireframe.png",
+      "text": "Pellentesque sapien purus, sagittis eu accumsan convallis, vehicula ut lectus. Fusce accumsan purus pretium ligula vehicula, ut interdum nisl vulputate. Vivamus ultrices luctus quam eu feugiat. Nunc sagittis odio eget odio laoreet mollis. Nullam rutrum blandit convallis. Maecenas id nisi eget nunc convallis consectetur nec sed nibh. Mauris in gravida",
+      "next_item": "#analytics",
+      "next_text": "Rich Profiles"
+    },
+    {
+      "title": "Send An Email At The Perfect Time",
+      "image": "animations/template_wireframe.png",
+      "text": "Pellentesque sapien purus, sagittis eu accumsan convallis, vehicula ut lectus. Fusce accumsan purus pretium ligula vehicula, ut interdum nisl vulputate. Vivamus ultrices luctus quam eu feugiat. Nunc sagittis odio eget odio laoreet mollis. Nullam rutrum blandit convallis. Maecenas id nisi eget nunc convallis consectetur nec sed nibh. Mauris in gravida",
+      "next_item": "#analytics",
+      "next_text": "Rich Profiles"
+    },
+    {
+      "title": "See Whats Working",
+      "image": "animations/template_wireframe.png",
+      "text": "Pellentesque sapien purus, sagittis eu accumsan convallis, vehicula ut lectus. Fusce accumsan purus pretium ligula vehicula, ut interdum nisl vulputate. Vivamus ultrices luctus quam eu feugiat. Nunc sagittis odio eget odio laoreet mollis. Nullam rutrum blandit convallis. Maecenas id nisi eget nunc convallis consectetur nec sed nibh. Mauris in gravida",
+      "next_item": "#analytics",
+      "next_text": "Rich Profiles"
+    }
+  ]
+}

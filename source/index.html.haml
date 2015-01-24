@@ -1,0 +1,137 @@
+%section#intro
+  .overlay
+    .container
+      #intro_content.row
+        #newsletter-top.col-md-12.text-center
+          / INTRO TEXT
+          .intro_text
+            %h2 Warm Up Your Cold Email
+            %p
+              OutreachPro turns an email list into profiles rich with information so that you can send amazing cold emails.
+          #signup
+            %form#newsletter_form{:action => "//octaviuslabs.us9.list-manage.com/subscribe/post-json?u=b938c35c367eaa74a26005d87&\tid=69ae69db4f&c=?", :method => "POST"}
+              #newsletterfields
+                %input#mce-EMAIL{:name => "EMAIL", :placeholder => "glengarry@mitchandmurry.com", :type => "email", :value => ""}/
+                %input#mce-PLAN{:name => "PLAN", :type => "hidden", :value => "none"}/
+                %input{:type => "submit", :value => "Get Started"}/
+            .message
+
+- data.tour.sections.each do |section|
+  = partial "tour_section", locals: { section: section }
+  
+%section#video
+  \&nbsp
+  .container
+    .row
+      #services_image.col-md-12.text-center.animated{"data-animation" => "fadeInUp", "data-animation-delay" => "300"}
+        %iframe#vimeo-player{:allowfullscreen => "", "data-progress" => "true", :frameborder => "0", :height => "601", :mozallowfullscreen => "", :src => "//player.vimeo.com/video/113456985?title=0&byline=0&portrait=0", :webkitallowfullscreen => "", :width => "1070"}
+    .row
+      #service-buttons.col-md-12.text-center
+        %a.btn.btn-theme.animated{"data-animation" => "bounceIn", "data-animation-delay" => "700", "data-scroll" => "", :href => "#pricing"} See Pricing
+    %hr/
+    .row
+      .col-md-6
+        / SERVICE BOX
+        .service-box.animated{"data-animation" => "fadeInUp", "data-animation-delay" => "300"}
+          %h4
+            %i.fa.fa-cogs>
+            Automated Research
+          %p
+            Manually looking through the internet to find information about a prospect takes forever. OutreachPro does this the research for you and centralizes all available data from social profiles and websites into easy to read contact cards.
+        / SERVICE BOX
+        .service-box.animated{"data-animation" => "fadeInUp", "data-animation-delay" => "300"}
+          %h4
+            %i.fa.fa-comments-o>
+            Quickly Personalize Templates
+          %p
+            Studies show that email outreach conversion rates jumps by 14% if you include a personalized messages. With OutreachPro you can quickly add personalized messages each user or groups of users.
+      .col-md-6
+        / SERVICE BOX
+        .service-box.animated{"data-animation" => "fadeInUp", "data-animation-delay" => "500"}
+          %h4
+            %i.fa.fa-star>
+            Easy Lead Scoring
+          %p
+            Before OutreachPro, it was hard to qualify prospects quickly. Now our "Tinder-like" user interface makes it quick and easy. When each contact card is displayed you can score and save or skip a prospect one click.
+          \ 
+        / SERVICE BOX
+        .service-box.animated{"data-animation" => "fadeInUp", "data-animation-delay" => "500"}
+          %h4
+            %i.fa.fa-line-chart>
+            See Whats Working
+          %p
+            The most painful part of outreach is sending emails out and never getting feedback. Outreach pro lets you see when people viewed your messages and what links they clicked on.
+  / End container
+/ END SERVICES
+/
+  PRICING
+  \=============================================
+%section#pricing
+  .container
+    / SECTION TITLE
+    .row
+      .col-sm-12.titlebar
+        %h3 Our pricing
+        %h2 Choose your package
+    / PRICING TABLE HOLDER
+    .row.price-row
+      / PRICE PLAN STANDARD
+      #price_2.col-xs-6.col-sm-6.col-md-4.col-md-offset-2.animated{"data-animation" => "fadeInLeft", "data-animation-delay" => "400"}
+        .pricing-table.text-center
+          / Table Header
+          %h3 Early Access
+          / Plan Price
+          .price
+            %sup $
+            %span.color 0
+            %sup.color 00
+            \/mo
+          / Plan Features
+          %ul.features
+            %li
+              Enrich Up to
+              %strong 10 Leads
+            %li
+              Send Up to
+              %strong 10 Emails
+            %li Unlimited Profiles
+            %li Email Open Tracking
+          / Table Button
+          %a#select_early_plan.btn.btn-theme{"data-scroll" => "", :href => "#intro"} Select Plan
+      / END PRICE PLAN STANDARD
+      / PRICE PLAN ADVANCED
+      #price_3.col-xs-6.col-sm-6.col-md-4.animated{"data-animation" => "fadeInRight", "data-animation-delay" => "600"}
+        .pricing-table.text-center.highlight
+          / Table Header
+          %h3 Unlimited
+          .down-arrow
+          / Plan Price
+          .price
+            %sup $
+            %span.color 19
+            %sup.color 00
+            \/mo
+          / Plan Features
+          %ul.features
+            %li
+              Enrich
+              %strong Unlimited
+              Leads
+            %li
+              Send
+              %strong Unlimited
+              Emails
+            %li
+              Save
+              %strong Unlimited
+              Profiles
+            %li
+              Track
+              %strong Unlimited
+              EMAIL OPENS
+          / Table Button
+          %a#select_ulimited_plan.btn.btn-theme{"data-scroll" => "", :href => "#intro"} Select Plan
+      / END PRICE PLAN ADVANCED
+    / End row
+  / End container
+/ END PRICING

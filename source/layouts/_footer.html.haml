@@ -1,0 +1,19 @@
+%footer#footer
+  .container
+    .row
+      #footer_copyright.col-sm-12.text-center
+        %p
+          Copyright 2014
+          = succeed "." do
+            %span
+              %a{:href => "http://octaviuslabs.com"} octavius labs llc
+        %p
+          %a{:href => "./privacy_policy.htm", :target => "_blank"} Privacy Policy
+    .row
+      #footer_socials.col-sm-12.text-center
+        #contact_icons
+          %ul.contact-socials.clearfix
+            %li
+              %a.foo_social.ico-twitter{:href => "http://twitter.com/octaviuslabs"}
+                %i.fa.fa-twitter
+

@@ -1,0 +1,24 @@
+$header-image: "http://i.istockimg.com/file_thumbview_approve/37824206/2/stock-photo-37824206-smiling-man-using-a-smartphone-on-the-street.jpg";
+
+@charset "utf-8";
+@import "bootstrap.css";
+@import "font-awesome.min.css";
+@import "flexslider.css";
+@import "prettyPhoto.css";
+@import "owl.carousel.css";
+@import "animate.min.css";
+@import "style.css";
+@import "blue.css";
+@import "responsive.css";
+
+
+@media (min-width: 768px) { 
+  .vertical-align {
+      display: flex;
+      align-items: center;
+  }
+}
+
+#intro {
+  background-image: url($header-image);
+}

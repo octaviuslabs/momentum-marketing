@@ -1,0 +1,14 @@
+%section#about
+  .container
+    / TABS HOLDER
+    #tabs-holder.row.vertical-align
+      / TABS
+      .col-md-7
+        %h2
+          = section.title
+        %div
+          %p
+            = section.text
+          = link_to section.next_text, section.next_item, class: "btn btn-theme animated", data: { animation: "bounceIn", animation: { delay: "300"}}
+      .col-md-5.text-center.animated{"data-animation" => "fadeInRight", "data-animation-delay" => "600"}
+        = image_tag section.image, class: "img-responsive"
