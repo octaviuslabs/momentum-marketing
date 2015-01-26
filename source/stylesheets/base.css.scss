@@ -11,7 +11,6 @@ $header-image: "http://i.istockimg.com/file_thumbview_approve/37824206/2/stock-p
 @import "blue.css";
 @import "responsive.css";
 
-
 @media (min-width: 768px) { 
   .vertical-align {
       display: flex;
@@ -21,4 +20,117 @@ $header-image: "http://i.istockimg.com/file_thumbview_approve/37824206/2/stock-p
 
 #intro {
   background-image: url($header-image);
+  height: 100%;
+}
+
+.tour {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-top: 1px solid #eee;
+}
+
+.white {
+  @extend .tour;
+  background-color: #ffffff; 
+}
+
+.grey {
+  @extend .tour;
+  background-color: #f5f5f5; 
+}
+
+@mixin header-button($bg-color){
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 15px 30px;
+  border: 0;
+  margin: 5px;
+  background-color: $bg-color;
+  color: #fff;
+  line-height: inherit;
+  -webkit-transition: all ease 0.25s;
+  transition: all ease 0.25s;
+}
+
+.header-button {
+  @include header-button(#008ED6);
+}
+
+.header-button-secondary {
+  @include header-button(#ffffff);
+  border: 1px solid #727272;
+  color: #323232;
+}
+
+.header-button-secondary-white {
+  @extend .header-button-secondary;
+  border: 1px solid #727272;
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.header-button-secondary-white:hover {
+    border: 1px solid rgba(255,255,255,1);
+    color: #ffffff;
+}
+
+/*========================================
+   4.9 SECTION: CALL TO ACTION              
+==========================================*/
+/*---------------------------------------
+   4.9.1 CALL TO ACTION WITH TEXT/BUTTON          
+-----------------------------------------*/
+.cta-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: url($header-image) no-repeat center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.cta-section h4 {
+  color: #ffffff;
+}
+
+.cta-section h2 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+.cta-section h3 {
+  color: #ffffff;
+}
+
+.cta-section .color-overlay {
+  padding-top: 125px;
+  padding-bottom: 125px;
+}
+
+/*---------------------------------------
+   4.9.2 SUBSCRIBE FORM           
+-----------------------------------------*/
+.subscribe-section {
+  margin-top: 75px;
+}
+
+.subscription-form .input-box {
+  width: 300px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  height: 55px;
+  border-radius: 3px;
+  font-size: 16px;
+  color: #000000;
+  box-shadow: inherit;
+}
+
+.subscription-success,
+.subscription-error {
+    color: #FFFFFF;
 }

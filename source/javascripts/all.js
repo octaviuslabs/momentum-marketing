@@ -20,3 +20,6 @@
 //= require "waypoints.min"
 //= require "smooth-scroll.min"
 //= require "custom"
+
+
+smoothScroll.init();

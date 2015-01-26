@@ -1,0 +1,29 @@
+/ #signup
+/   %form#newsletter_form{:action => "//octaviuslabs.us9.list-manage.com/subscribe/post-json?u=b938c35c367eaa74a26005d87&\tid=69ae69db4f&c=?", :method => "POST"}
+/     #newsletterfields
+/       %input#mce-EMAIL{:name => "EMAIL", :placeholder => "glengarry@mitchandmurry.com", :type => "email", :value => ""}/
+/       %input#mce-PLAN{:name => "PLAN", :type => "hidden", :value => "none"}/
+/       %input{:type => "submit", :value => "Get Started"}/
+/   .message
+
+%section.cta-section{id: "get-started"}
+  .color-overlay
+    .container
+      %h4 We Are Ready to Help You
+      %h2 Get the Best Solution for Your Business
+      #cta-4
+        %a.btn.standard-button{:href => "#home"} Get Started
+      / MAILCHIMP SUBSCRIBE FORM
+      .subscribe-section
+        %h3 Or, Mailchimp Subscription Form
+        %form.subscription-form.mailchimp.form-inline{:role => "form"}
+          / SUBSCRIPTION SUCCESSFUL OR ERROR MESSAGES
+          %h6.subscription-success
+          %h6.subscription-error
+          / EMAIL INPUT BOX
+          %input#subscriber-email.form-control.input-box{:name => "email", :placeholder => "Your Email", :type => "email"}/
+          / SUBSCRIBE BUTTON
+          %button#subscribe-button.btn.standard-button{:type => "submit"} Subscribe
+      / /END SUBSCRIPTION FORM
+    / /END CONTAINER
+  / /END COLOR OVERLAY
