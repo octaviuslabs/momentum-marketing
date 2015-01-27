@@ -1,3 +1,7 @@
+- if build?
+  - post_url = data.remote_keys.mailchimp.production
+- else
+  - post_url = data.remote_keys.mailchimp.development
 %section.signup-section{id: "get-started"}
   .container.signup_form
     .row.vertical-align
@@ -11,7 +15,7 @@
           Enter your email below and lets
           %u get the process started!
         #signup
-          %form{:action => "//octaviuslabs.us9.list-manage.com/subscribe/post-json?u=b938c35c367eaa74a26005d87&\tid=69ae69db4f&c=?", :method => "POST"}
+          %form{action: (post_url), method: "POST", id: "signup_form"}
             .field-wrapper
               %input#mce-EMAIL{:name => "EMAIL", :placeholder => "Your Work Email", :type => "email", :value => ""}/
               %input#mce-PLAN{:name => "PLAN", :type => "hidden", :value => "none"}/

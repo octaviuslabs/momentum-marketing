@@ -1,6 +1,3 @@
-$intro-image: "../images/backgrounds/busy_street.jpeg";
-$signup-image: "../images/backgrounds/faces.jpg";
-
 @charset "utf-8";
 @import "bootstrap.css";
 @import "font-awesome.min.css";
@@ -11,6 +8,9 @@ $signup-image: "../images/backgrounds/faces.jpg";
 @import "style.css";
 @import "blue.css";
 @import "responsive.css";
+
+$intro-image: "../images/backgrounds/busy_street.jpeg";
+$signup-image: "../images/backgrounds/faces.jpg";
 
 @mixin vertical-alignment{
   @media (min-width: 768px) { 

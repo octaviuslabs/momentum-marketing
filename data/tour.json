@@ -2,25 +2,25 @@
   "sections": [
     {
       "id": "email_templates",
-      "title": "The Art Of The One Handed Email",
+      "title": "Send Emails With One Hand",
       "image": "product_shots/email_templates.png",
-      "text": "Pellentesque sapien purus, sagittis eu accumsan convallis, vehicula ut lectus. Fusce accumsan purus pretium ligula vehicula, ut interdum nisl vulputate. Vivamus ultrices luctus quam eu feugiat. Nunc sagittis odio eget odio laoreet mollis. Nullam rutrum blandit convallis. Maecenas id nisi eget nunc convallis consectetur nec sed nibh. Mauris in gravida",
+      "text": "You are at dinner with a client and they just got up to go to the bathroom. This is an amazing time to whip out {{OutreachPRO}} and send process through 25 new prospects. With one hand you can swipe through all templates that you have created or even create a new one.",
       "next_item": "#profiles",
-      "next_text": "Contact Profile"
+      "next_text": "Easier Qualification"
     },
     {
       "id": "profiles",
       "title": "Know Who Is Likely To Buy",
       "image": "product_shots/profiles.png",
-      "text": "Pellentesque sapien purus, sagittis eu accumsan convallis, vehicula ut lectus. Fusce accumsan purus pretium ligula vehicula, ut interdum nisl vulputate. Vivamus ultrices luctus quam eu feugiat. Nunc sagittis odio eget odio laoreet mollis. Nullam rutrum blandit convallis. Maecenas id nisi eget nunc convallis consectetur nec sed nibh. Mauris in gravida",
+      "text": "Not sure that you should spend resources looking into a new prospect? {{OutreachPRO}} is constantly crawling the internet and aggrigating data about prospects in your pipeline so you don't need to.",
       "next_item": "#time_slotting",
-      "next_text": "Get The Most Opens"
+      "next_text": "Email At The Optimal Time"
     },
     {
       "id": "time_slotting",
       "title": "Send An Email At The Perfect Time",
       "image": "product_shots/time_slotting.png",
-      "text": "Pellentesque sapien purus, sagittis eu accumsan convallis, vehicula ut lectus. Fusce accumsan purus pretium ligula vehicula, ut interdum nisl vulputate. Vivamus ultrices luctus quam eu feugiat. Nunc sagittis odio eget odio laoreet mollis. Nullam rutrum blandit convallis. Maecenas id nisi eget nunc convallis consectetur nec sed nibh. Mauris in gravida",
+      "text": "Timing is everything in sales. {{OutreachPRO}} allows you to configure set 'timeslots' to send your emails out. Once the timeslots are setup, anytime you press the send button we automatically send the email out durring the next avaiable timeslot.",
       "next_item": "#whats_working",
       "next_text": "See Whats Working"
     },
@@ -28,7 +28,7 @@
       "id": "whats_working",
       "title": "See Whats Working",
       "image": "product_shots/whats_working.png",
-      "text": "Pellentesque sapien purus, sagittis eu accumsan convallis, vehicula ut lectus. Fusce accumsan purus pretium ligula vehicula, ut interdum nisl vulputate. Vivamus ultrices luctus quam eu feugiat. Nunc sagittis odio eget odio laoreet mollis. Nullam rutrum blandit convallis. Maecenas id nisi eget nunc convallis consectetur nec sed nibh. Mauris in gravida",
+      "text": "No longer do you need to send emails out into the void. {{OutreachPRO}} ",
       "next_item": "#pricing",
       "next_text": "See Pricing"
     }
