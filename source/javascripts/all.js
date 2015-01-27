@@ -133,7 +133,6 @@ $(document).ready(function(){
   
 });
 
-
 smoothScroll.init();
 jQuery(function($) {
   $('body').panelSnap();

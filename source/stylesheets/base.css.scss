@@ -78,10 +78,41 @@ html, body {
   height: 100%;
 }
 
+.how_it_works, #how_it_works {
+
+  .steps {
+    img {
+      width: auto;
+      max-height: 300px;
+    }
+    h4 {
+      text-transform: uppercase;
+      padding-top: 20px;    
+    }
+
+    h3 {
+      text-transform: uppercase;
+      padding-bottom: 10px;
+      color: #008ED6;
+    }
+  }
+  .action {
+    text-align: center;
+  }
+}
+
 .tour {
   @include vertical-alignment;
-  height: 100%;
+  @media (min-width: 768px) { 
+    height: 100%;
+  }
   border-top: 1px solid #eee;
+  padding-top: 70px;
+  padding-bottom: 10px;
+  img {
+    width: auto;
+    max-height: 500px;
+  }
 }
 
 .white {
@@ -97,7 +128,6 @@ html, body {
 .pricing {
   @extend .tour;
   background-color: #bdc3c7; 
-  border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 } 
 

@@ -2,8 +2,10 @@
   .container
     .row
       .col-sm-12.titlebar
-        %h3 Beta Pricing Special
-        %h2 Choose your package
+        %h3 Free For 120 Days
+        %h2 Our Pricing
     .row.price-row
-      = partial "pricing_table", locals: { package: data.packages.beta_tester, klass: "col-md-offset-2 price_1", animation: "fadeInLeft", offset: true}
-      = partial "pricing_table", locals: { package: data.packages.unlimited_forver, klass: "price_3", animation: "fadeInRight", highlight: true}
+      .col-xs-6.col-sm-6.col-md-4.animated{"data-animation" => "fadeInLeft", "data-animation-delay" => "400", class: "col-md-offset-2 price_1"}
+        = partial "pricing_table", locals: { package: data.packages.beta_tester }
+      .col-xs-6.col-sm-6.col-md-4.animated{"data-animation" => "fadeInRight", "data-animation-delay" => "800", class: "price_3"}
+        = partial "pricing_table", locals: { package: data.packages.unlimited_forver, highlight: true }

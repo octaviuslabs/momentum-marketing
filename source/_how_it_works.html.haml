@@ -1,0 +1,22 @@
+%section.tour#how_it_works
+  .container
+    .row
+      .col-sm-12.titlebar
+        %h2 How It Works
+    .row.steps
+      .col-md-4.text-center.animated{ data: { animation: "fadeInLeft", "animation-delay" => "100" } }
+        %h3 Step 1
+        = image_tag "product_shots/set_goal.png", class: "img-responsive"
+        %h4 Set Your Daily Outreach Goal 
+      .col-md-4.text-center.animated{ data: { animation: "fadeInLeft", "animation-delay" => "1500" } }
+        %h3 Step 2
+        = image_tag "product_shots/lead_processing.png", class: "img-responsive"
+        %h4 Process A Batch Of Leads When You Have A Free Moment
+      .col-md-4.text-center.animated{ data: { animation: "fadeInLeft", "animation-delay" => "3000" } }
+        %h3 Step 3
+        = image_tag "product_shots/alert.png", class: "img-responsive"
+        %h4 Get Alerts To Help You Keep On Track
+    .row.action
+      .col-sm-12
+        = link_to "Take The Tour", "#email_templates", class: "btn header-button-secondary", data: { scroll: true }
+        = link_to "Try It Out", "#get-started", class: "btn header-button", data: { scroll: true }

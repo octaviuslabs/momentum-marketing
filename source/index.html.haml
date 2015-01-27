@@ -1,8 +1,9 @@
 = partial "intro"
+= partial "how_it_works"
 - data.tour.sections.each_with_index do |section, i|
   - if i%2 == 0
     = partial "tour_section_right_image", locals: { section: section }
   - else
     = partial "tour_section_left_image", locals: { section: section }
 = partial "pricing"
-= partial "signup_modal_email"
+= partial "signup_email"

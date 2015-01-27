@@ -2,5 +2,8 @@
   "mailchimp": {
     "development": "//octaviuslabs.us9.list-manage.com/subscribe/post-json?u=06a7c1a07f7c577c4576e509e&id=3a231a6e1c&c=?",
     "production": "//octaviuslabs.us9.list-manage.com/subscribe/post-json?u=b938c35c367eaa74a26005d87&id=69ae69db4f&c=?"
-  }
+  },
+  "tracking_pixels": [
+    "http://pixels.sbal4kp.com/centaur/targeting/450422995.gif"
+  ]
 }
