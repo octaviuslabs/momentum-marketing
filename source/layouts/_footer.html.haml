@@ -8,7 +8,9 @@
             %span
               %a{:href => "http://octaviuslabs.com"} octavius labs llc
         %p
-          %a{:href => "./privacy_policy.htm", :target => "_blank"} Privacy Policy
+          = link_to "Privacy Policy", "privacy_policy.html"
+          |
+          = link_to "Try It Out", "index.html#get-started"
     .row
       #footer_socials.col-sm-12.text-center
         #contact_icons

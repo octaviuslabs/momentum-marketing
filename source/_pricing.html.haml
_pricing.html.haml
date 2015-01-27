@@ -1,64 +1,40 @@
-%section#pricing
+%section.pricing{id: "pricing"}
   .container
     .row
       .col-sm-12.titlebar
         %h3 Our pricing
         %h2 Choose your package
-    / PRICING TABLE HOLDER
     .row.price-row
-      / PRICE PLAN STANDARD
-      #price_2.col-xs-6.col-sm-6.col-md-4.col-md-offset-2.animated{"data-animation" => "fadeInLeft", "data-animation-delay" => "400"}
-        .pricing-table.text-center
-          / Table Header
-          %h3 Early Access
-          / Plan Price
-          .price
-            %sup $
-            %span.color 0
-            %sup.color 00
-            \/mo
-          / Plan Features
-          %ul.features
-            %li
-              Enrich Up to
-              %strong 10 Leads
-            %li
-              Send Up to
-              %strong 10 Emails
-            %li Unlimited Profiles
-            %li Email Open Tracking
-          / Table Button
-          %a#select_early_plan.btn.btn-theme{"data-scroll" => "", :href => "#get-started"} Select Plan
-      / END PRICE PLAN STANDARD
-      / PRICE PLAN ADVANCED
-      #price_3.col-xs-6.col-sm-6.col-md-4.animated{"data-animation" => "fadeInRight", "data-animation-delay" => "600"}
-        .pricing-table.text-center.highlight
-          / Table Header
-          %h3 Unlimited
-          .down-arrow
-          / Plan Price
-          .price
-            %sup $
-            %span.color 19
-            %sup.color 00
-            \/mo
-          / Plan Features
-          %ul.features
-            %li
-              Enrich
-              %strong Unlimited
-              Leads
-            %li
-              Send
-              %strong Unlimited
-              Emails
-            %li
-              Save
-              %strong Unlimited
-              Profiles
-            %li
-              Track
-              %strong Unlimited
-              EMAIL OPENS
-          / Table Button
-          %a#select_ulimited_plan.btn.btn-theme{"data-scroll" => "", :href => "#get-started"} Select Plan
+      = partial "pricing_table", locals: { package: data.packages.beta_tester, klass: "col-md-offset-2 price_1", animation: "fadeInLeft", offset: true}
+      = partial "pricing_table", locals: { package: data.packages.unlimited_forver, klass: "price_3", animation: "fadeInRight", highlight: true}
+      / #price_3.col-xs-6.col-sm-6.col-md-4.animated{"data-animation" => "fadeInRight", "data-animation-delay" => "600"}
+      /   .pricing-table.text-center.highlight
+      /     / Table Header
+      /     %h3 Unlimited Forever
+      /     .down-arrow
+      /     / Plan Price
+      /     .price
+      /       %sup $
+      /       %span.color 19
+      /       %sup.color 00
+      /       \/mo
+      /     / Plan Features
+      /     %ul.features
+      /       %li
+      /         Enrich
+      /         %strong Unlimited
+      /         Leads
+      /       %li
+      /         Send
+      /         %strong Unlimited
+      /         Emails
+      /       %li
+      /         Save
+      /         %strong Unlimited
+      /         Profiles
+      /       %li
+      /         Track
+      /         %strong Unlimited
+      /         EMAIL OPENS
+      /     / Table Button
+      /     %a#select_ulimited_plan.btn.btn-theme{"data-scroll" => "", :href => "#get-started"} Select Plan

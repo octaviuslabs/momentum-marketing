@@ -1,4 +1,5 @@
-$header-image: "http://i.istockimg.com/file_thumbview_approve/37824206/2/stock-photo-37824206-smiling-man-using-a-smartphone-on-the-street.jpg";
+$intro-image: "../images/backgrounds/busy_street.jpeg";
+$signup-image: "../images/backgrounds/faces.jpg";
 
 @charset "utf-8";
 @import "bootstrap.css";
@@ -11,32 +12,11 @@ $header-image: "http://i.istockimg.com/file_thumbview_approve/37824206/2/stock-p
 @import "blue.css";
 @import "responsive.css";
 
-@media (min-width: 768px) { 
-  .vertical-align {
-      display: flex;
-      align-items: center;
+@mixin vertical-alignment{
+  @media (min-width: 768px) { 
+    display: flex;
+    align-items: center;
   }
-}
-
-#intro {
-  background-image: url($header-image);
-  height: 100%;
-}
-
-.tour {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  border-top: 1px solid #eee;
-}
-
-.white {
-  @extend .tour;
-  background-color: #ffffff; 
-}
-
-.grey {
-  @extend .tour;
-  background-color: #f5f5f5; 
 }
 
 @mixin header-button($bg-color){
@@ -54,6 +34,72 @@ $header-image: "http://i.istockimg.com/file_thumbview_approve/37824206/2/stock-p
   -webkit-transition: all ease 0.25s;
   transition: all ease 0.25s;
 }
+
+.vertical-align {
+  @include vertical-alignment;
+}
+
+html, body {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+.img-responsive {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.privacy-policy {
+  padding-top: 80px;
+}
+
+#intro {
+  height: 100%;
+  background: url($intro-image) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #fff;
+}
+
+#intro_content {
+  padding-top: 300px;
+  padding-bottom: 160px;
+}
+
+.overlay {
+  background-image: url(../images/thumbs/overlay.png);
+  background-color: rgba(0, 0, 0, 0.4); 
+  background-repeat: repeat;
+  height: 100%;
+}
+
+.tour {
+  @include vertical-alignment;
+  height: 100%;
+  border-top: 1px solid #eee;
+}
+
+.white {
+  @extend .tour;
+  background-color: #ffffff; 
+}
+
+.grey {
+  @extend .tour;
+  background-color: #f5f5f5; 
+}
+
+.pricing {
+  @extend .tour;
+  background-color: #bdc3c7; 
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+} 
 
 .header-button {
   @include header-button(#008ED6);
@@ -78,59 +124,74 @@ $header-image: "http://i.istockimg.com/file_thumbview_approve/37824206/2/stock-p
     color: #ffffff;
 }
 
-/*========================================
-   4.9 SECTION: CALL TO ACTION              
-==========================================*/
-/*---------------------------------------
-   4.9.1 CALL TO ACTION WITH TEXT/BUTTON          
------------------------------------------*/
-.cta-section {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background: url($header-image) no-repeat center fixed;
-  -webkit-background-size: cover;
-  background-size: cover;
+#signup {
+  .button-wrapper { 
+    padding: 10px;
+  }
 }
 
-.cta-section h4 {
+.signup-section {
+  @extend .tour;
+  background: url($signup-image) no-repeat center fixed;
+  background-attachment: fixed !important;
+  background-repeat: repeat;
+  background-position: 0 0;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  color: #fff;
+  h1, h2, h3, h4, p{
+    text-align: center;
+  };
+}
+
+.signup-section h4 {
   color: #ffffff;
 }
 
-.cta-section h2 {
+.signup-section h2 {
   color: #ffffff;
   font-weight: 700;
   margin-top: 15px;
   margin-bottom: 40px;
 }
 
-.cta-section h3 {
+.signup-section h3 {
   color: #ffffff;
 }
 
-.cta-section .color-overlay {
+.signup-section .color-overlay {
   padding-top: 125px;
   padding-bottom: 125px;
 }
 
-/*---------------------------------------
-   4.9.2 SUBSCRIBE FORM           
------------------------------------------*/
-.subscribe-section {
-  margin-top: 75px;
+
+.signup_form {
+  background-color: rgba(20, 20,20, 0.65);
+  padding: 20px;
+  width: 75%;
 }
 
-.subscription-form .input-box {
-  width: 300px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  height: 55px;
-  border-radius: 3px;
+#signup form input[type="submit"] {
+  right: auto;
+  width: 25%;
+  background-color: #f39c12;
+  border: 1px solid #f39c12;
+  color: #fff;
   font-size: 16px;
-  color: #000000;
-  box-shadow: inherit;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  -o-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px;
+  -webkit-transition: all 350ms ease-in-out;
+  -moz-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  -ms-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
 }
 
-.subscription-success,
-.subscription-error {
-    color: #FFFFFF;
+#signup form input[type="submit"]:hover {
+  background-color: #2793b6;
 }

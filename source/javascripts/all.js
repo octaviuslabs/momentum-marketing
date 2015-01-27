@@ -16,6 +16,7 @@
 //= require "owl.carousel"
 //= require "jquery.easypiechart.min"
 //= require "jquery.validate.min"
+//= require "jquery.panelSnap"
 // %script{:defer => "defer", :src => "jquery.validate.min" >>>>>>> keeping this in here
 //= require "waypoints.min"
 //= require "smooth-scroll.min"
@@ -23,3 +24,6 @@
 
 
 smoothScroll.init();
+jQuery(function($) {
+  $('body').panelSnap();
+});

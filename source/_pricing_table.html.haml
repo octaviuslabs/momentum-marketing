@@ -1,0 +1,20 @@
+- highlight ||= false
+.col-xs-6.col-sm-6.col-md-4.animated{"data-animation" => "#{animation}", "data-animation-delay" => "400", class: "#{klass}"}
+  .pricing-table.text-center{class: ("highlight" if highlight)}
+    %h3
+      = package.name
+    / Plan Price
+    .price
+      %sup $
+      %span.color
+        = package.pricing_dollars
+      %sup.color
+        = package.pricing_cents
+      \/mo
+    / Plan Features
+    %ul.features
+      - package.features.each do |feature|
+        %li
+          = feature
+    / Table Button
+    %a#select_early_plan.btn.btn-theme{"data-scroll" => "", :href => "#get-started"} Select Plan

@@ -296,25 +296,25 @@ a:focus {
    03. INTRO
    ========================================================================== */
 
-#intro {
+/*#intro {
 	width: 100%;
 	background-image: url(../images/thumbs/intro_bkg.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;		
 	background-size: cover;
 	color: #fff;
-}
+}*/
 
 /*------------------------------------------*/
 /*	 Overlay Pattern 
 /*------------------------------------------*/
 
-.overlay {
+/*.overlay {
 	background-image: url(../images/thumbs/overlay.png);
 	background-color: rgba(0, 0, 0, 0.4); 
 	background-repeat: repeat;
 	height: 100%;
-}
+}*/
 
 /*------------------------------------------*/
 /*	 INTRO CONTENT
@@ -1335,13 +1335,13 @@ textarea {
    13. PRICING 
    ========================================================================== */
 
-#pricing {
+/*#pricing {
 	background-color: #f5f5f5; 
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
 	padding-top: 80px;
 	padding-bottom: 50px;
-} 
+} */
 
 /*------------------------------------------*/
 /*	 PRICING TABLE
