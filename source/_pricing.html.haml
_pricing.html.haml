@@ -5,7 +5,8 @@
         %h3 Free For 120 Days
         %h2 Our Pricing
     .row.price-row
-      .col-xs-6.col-sm-6.col-md-4.animated{"data-animation" => "fadeInLeft", "data-animation-delay" => "400", class: "col-md-offset-2 price_1"}
+      .col-xs-6.col-sm-6.col-md-4.price-col.animated{"data-animation" => "fadeInLeft", "data-animation-delay" => "400", class: "col-md-offset-2 price_1"}
         = partial "pricing_table", locals: { package: data.packages.beta_tester }
-      .col-xs-6.col-sm-6.col-md-4.animated{"data-animation" => "fadeInRight", "data-animation-delay" => "800", class: "price_3"}
+
+      .col-xs-6.col-sm-6.col-md-4.price-col.animated{"data-animation" => "fadeInRight", "data-animation-delay" => "800", class: "price_3"}
         = partial "pricing_table", locals: { package: data.packages.unlimited_forver, highlight: true }

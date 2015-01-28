@@ -133,7 +133,12 @@ $(document).ready(function(){
   
 });
 
-smoothScroll.init();
+// Scrolling 
+
 jQuery(function($) {
-  $('body').panelSnap();
+  smoothScroll.init({
+    speed: 1000,
+    easing: 'easeInOutQuart'
+  });
+  // $('.tour').panelSnap();
 });

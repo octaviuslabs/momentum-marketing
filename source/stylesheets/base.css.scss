@@ -11,13 +11,16 @@
 
 $intro-image: "../images/backgrounds/busy_street.jpeg";
 $signup-image: "../images/backgrounds/faces.jpg";
+$section-padding: 80px;
+$width-breakpoint: "min-width: 768px";
 
 @mixin vertical-alignment{
-  @media (min-width: 768px) { 
+  @media ($width-breakpoint) { 
     display: flex;
     align-items: center;
   }
 }
+
 
 @mixin header-button($bg-color){
   font-family: 'Raleway', sans-serif;
@@ -33,6 +36,12 @@ $signup-image: "../images/backgrounds/faces.jpg";
   line-height: inherit;
   -webkit-transition: all ease 0.25s;
   transition: all ease 0.25s;
+}
+
+@mixin full-screen {
+  @media ($width-breakpoint) { 
+    height: 100%;
+  }
 }
 
 .vertical-align {
@@ -53,7 +62,7 @@ html, body {
 }
 
 .privacy-policy {
-  padding-top: 80px;
+  padding-top: $section-padding;
 }
 
 #intro {
@@ -64,22 +73,22 @@ html, body {
   -o-background-size: cover;
   background-size: cover;
   color: #fff;
-}
 
-#intro_content {
-  padding-top: 300px;
-  padding-bottom: 160px;
+  .row {
+    padding-top: $section-padding;
+    text-align: center;   
+  }
 }
 
 .overlay {
+  @include vertical-alignment;
   background-image: url(../images/thumbs/overlay.png);
-  background-color: rgba(0, 0, 0, 0.4); 
+  background-color: rgba(0, 0, 0, 0.70); 
   background-repeat: repeat;
   height: 100%;
 }
 
 .how_it_works, #how_it_works {
-
   .steps {
     img {
       width: auto;
@@ -103,9 +112,7 @@ html, body {
 
 .tour {
   @include vertical-alignment;
-  @media (min-width: 768px) { 
-    height: 100%;
-  }
+  @include full-screen;
   border-top: 1px solid #eee;
   padding-top: 70px;
   padding-bottom: 10px;
@@ -127,8 +134,13 @@ html, body {
 
 .pricing {
   @extend .tour;
+  height: auto;
   background-color: #bdc3c7; 
   border-bottom: 1px solid #eee;
+
+  .price-col {
+    padding-bottom: 10px;
+  }
 } 
 
 .header-button {
@@ -156,7 +168,7 @@ html, body {
 
 #signup {
   .button-wrapper { 
-    padding: 10px;
+    padding-top: 5px;
   }
 }
 
@@ -199,11 +211,18 @@ html, body {
   background-color: rgba(20, 20,20, 0.65);
   padding: 20px;
   width: 75%;
+
+  h1 {
+    padding-top: 10px;
+  }
 }
 
 #signup form input[type="submit"] {
   right: auto;
-  width: 25%;
+  width: 100%;
+  @media ($width-breakpoint) { 
+    width: 25%;
+  }
   background-color: #f39c12;
   border: 1px solid #f39c12;
   color: #fff;
@@ -223,5 +242,5 @@ html, body {
 }
 
 #signup form input[type="submit"]:hover {
-  background-color: #2793b6;
+  background-color: #f39c12;
 }
