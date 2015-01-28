@@ -9,17 +9,14 @@
     - if build?
       = javascript_include_tag "//cdn.optimizely.com/js/2223003354.js"
     %meta{:charset => "utf-8"}/
-    %title OutreachPro: Warm Up Your Cold Email
+    %title
+      = data.basics.title
     %meta{:content => "octaviuslabs llc", :name => "author"}/
-    %meta{:content => "email outreach program, email outreach, email outreach examples, email outreach template, email outreach tools, email outreach software, email outreach quicksprout, email outreach specialist, seo email outreach, bulk email outreach, email outreach program, email outreach examples, email outreach template, email outreach tools, email outreach software, email outreach quicksprout, email outreach, email outreach specialist, seo email outreach, bulk email outreach, bulk email outreach, cardon outreach email, carolina outreach email, cold outreach email, campus outreach email, customer outreach email, email outreach examples, blogger outreach email example, outreach email subject line, email outreach program, email outreach quicksprout, email outreach software, email outreach specialist, outreach email sample, outreach email subject line, seo email outreach, email outreach template, email outreach tools, blogger outreach email template", :name => "keywords"}/
-    %meta{:content => "OutreachPro: Warm Up Your Cold Email", :name => "description"}/
-
-    / Mobile Specific Metas
+    %meta{:content => "#{data.basics.keywords}", :name => "keywords"}/
+    %meta{:content => "#{data.basics.description}", :name => "description"}/
     %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}/
     = stylesheet_link_tag "base"
     = partial "layouts/header_icons" 
-
-    / Google Fonts
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,800italic,800,700italic,700,600italic,600,400italic,300"
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Oswald:400,300,700"
 

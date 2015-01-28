@@ -85,16 +85,17 @@ function valid_email_address(email) {
 
 // Toggles Button
 function switch_plan_to(plan_name){
+  console.log("Set plan to " + plan_name);
   $('#mce-PLAN').val(plan_name);
   return plan_name;
 };
 
 $('#select_ulimited_plan').click(function() {
-  switch_plan_to("unlimited");
+  switch_plan_to("unlimited_forver");
 });
 
-$('#select_early_plan').click(function() {
-  switch_plan_to("early_access");
+$('#select_beta_plan').click(function() {
+  switch_plan_to("beta_user");
 });
 
 // Form Validators

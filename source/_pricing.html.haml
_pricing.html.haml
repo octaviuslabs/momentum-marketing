@@ -6,7 +6,40 @@
         %h2 Our Pricing
     .row.price-row
       .col-xs-6.col-sm-6.col-md-4.price-col.animated{"data-animation" => "fadeInLeft", "data-animation-delay" => "400", class: "col-md-offset-2 price_1"}
-        = partial "pricing_table", locals: { package: data.packages.beta_tester }
-
+        .pricing-table.text-center
+          %h3
+            = data.packages.beta_tester.name
+          / Plan Price
+          .price
+            %sup $
+            %span.color
+              = data.packages.beta_tester.pricing_dollars
+            %sup.color
+              = data.packages.beta_tester.pricing_cents
+            \/mo
+          / Plan Features
+          %ul.features
+            - data.packages.beta_tester.features.each do |feature|
+              %li
+                = feature
+          / Table Button
+          %a#select_beta_plan.btn.btn-theme{"data-scroll" => "", :href => "#get-started"} Select Plan
       .col-xs-6.col-sm-6.col-md-4.price-col.animated{"data-animation" => "fadeInRight", "data-animation-delay" => "800", class: "price_3"}
-        = partial "pricing_table", locals: { package: data.packages.unlimited_forver, highlight: true }
+        .pricing-table.text-center{class: "highlight" }
+          %h3
+            = data.packages.unlimited_forver.name
+          / Plan Price
+          .price
+            %sup $
+            %span.color
+              = data.packages.unlimited_forver.pricing_dollars
+            %sup.color
+              = data.packages.unlimited_forver.pricing_cents
+            \/mo
+          / Plan Features
+          %ul.features
+            - data.packages.unlimited_forver.features.each do |feature|
+              %li
+                = feature
+          / Table Button
+          %a#select_ulimited_plan.btn.btn-theme{"data-scroll" => "", :href => "#get-started"} Select Plan
