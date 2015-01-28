@@ -5,22 +5,6 @@
       "title": "Email New Prospects Quickly",
       "image": "product_shots/email_templates.png",
       "text": "Typing emails on a mobile device is tough and time consuming. OutreachPRO puts email templates at your fingertips so you can reach out to your prospect with the right message.",
-      "next_item": "#profiles",
-      "next_text": "Qualify Quicker"
-    },
-    {
-      "id": "profiles",
-      "title": "Identify Qualified Prospects Quicker",
-      "image": "product_shots/profiles.png",
-      "text": "The average salesperson spends anywhere from 11 to 19 hours every week qualifying leads. OutreachPRO does the leg work for you. We aggregate information on a prospect from dozens of sources into profiles so that you add context for your conversations.",
-      "next_item": "#time_slotting",
-      "next_text": "Get More Responses"
-    },
-    {
-      "id": "time_slotting",
-      "title": "Get More Responses",
-      "image": "product_shots/time_slotting.png",
-      "text": "When you press the send button in OutreachPRO you have the option to queue the email up to deliver during pre-configured time slots. This means that you can easily delay the delivery of emails to the times that you think prospects are most likely to respond.",
       "next_item": "#whats_working",
       "next_text": "Know Whats Working"
     },
@@ -29,6 +13,22 @@
       "title": "Know Whats Working",
       "image": "product_shots/whats_working.png",
       "text": "Want to know which emails make prospects respond the most or how many prospects are clicking links in your messages? OutreachPRO shows you important message statistics allows you to start a/b testing your emails.",
+      "next_item": "#time_slotting",
+      "next_text": "Get More Responses"
+    },
+    {
+      "id": "time_slotting",
+      "title": "Get More Responses",
+      "image": "product_shots/time_slotting.png",
+      "text": "When you press the send button in OutreachPRO you have the option to queue the email up to deliver during pre-configured time slots. This means that you can easily delay the delivery of emails to the times that you think prospects are most likely to respond.",
+      "next_item": "#profiles",
+      "next_text": "Qualify Quicker"
+    },
+    {
+      "id": "profiles",
+      "title": "Identify Qualified Prospects Quicker",
+      "image": "product_shots/profiles.png",
+      "text": "The average salesperson spends anywhere from 11 to 19 hours every week qualifying leads. OutreachPRO does the leg work for you. We aggregate information on a prospect from dozens of sources into profiles so that you add context for your conversations.",
       "next_item": "#pricing",
       "next_text": "Checkout Pricing"
     }
