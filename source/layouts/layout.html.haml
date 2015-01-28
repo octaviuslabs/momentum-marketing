@@ -6,9 +6,10 @@
 %html{:lang => "en"}
   / <![endif]
   %head
+    %meta{:charset => "utf-8"}/
+    = javascript_include_tag "jquery-2.1.1.min"
     - if build?
       = javascript_include_tag "//cdn.optimizely.com/js/2223003354.js"
-    %meta{:charset => "utf-8"}/
     %title
       = data.basics.title
     %meta{:content => "octaviuslabs llc", :name => "author"}/
