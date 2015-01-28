@@ -14,7 +14,7 @@
           Enter your email below and lets
           %u get the process started!
         #signup
-          %form{action: (post_url), method: "POST", id: "signup_form"}
+          %form#signup_form{action: (post_url), method: "POST"}
             .field-wrapper
               %input#mce-EMAIL{:name => "EMAIL", :placeholder => "Your Work Email", :type => "email", :value => ""}/
               %input#mce-PLAN{:name => "PLAN", :type => "hidden", :value => "none"}/
