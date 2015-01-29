@@ -7,11 +7,11 @@ $(document).ready(function() {
   var messageArea = $(".message");
   var emailArea = $("#mce-EMAIL");
   var planArea = $('#mce-PLAN');
-
   var invalidEmailInstructions = "<span style='color:#D91E18;'>The email address you entered was invalid. Please make sure you enter a valid email address to sign up.</span>";
   var successInstructions = '<span style="color:#87D37C;">Great! Please confirm your email address by following the instructions we just sent you.</span>';
   var errorInstructions = "Could not connect to the registration server. Please send an email to hello {at} octaviuslabs.com";
-  var conversionPixel = '<img src="http://pixels.sbal4kp.com/centaur/conversion/180171087.gif" width="0" height="0">';
+  var conversionPixelUrl = signUpForm.data("conversion-pixel");
+  var conversionPixel ='<img src="' + conversionPixelUrl + '" width="0" height="0">';
 
   signUpForm.submit(function() {
     if (!valid_email_address(emailArea.val()))
@@ -31,12 +31,12 @@ $(document).ready(function() {
             contentType: "application/json; charset=utf-8",
             error       : function(err) { 
               ga('send', 'event', "signups", "new", plan_name + "_error");
+              messageArea.html(invalidEmailInstructions);
               messageArea.html(errorInstructions);
             },
             success     : function(data) {
-                if (data.result != "success") {
+                if (data.id == "null") {
                   ga('send', 'event', "signups", "new", plan_name + "_error");
-                  messageArea.html(invalidEmailInstructions);
                 } else {
                   ga('send', 'event', "signups", "new", plan_name + "_success");
                   window['optimizely'] = window['optimizely'] || [];
@@ -48,8 +48,7 @@ $(document).ready(function() {
             }
         });
       }
-   
-      return false;     
+    return false;     
   });
   
 });

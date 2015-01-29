@@ -1,7 +1,9 @@
 - if build?
-  - post_url = data.remote_keys.mailchimp.production
+  - conversion_pixel = data.remote_keys.conversion_pixels.production
+  - server_url = data.remote_keys.email_server.production
 - else
-  - post_url = data.remote_keys.mailchimp.development
+  - conversion_pixel = data.remote_keys.conversion_pixels.development
+  - server_url = data.remote_keys.email_server.development
 %section.signup-section{id: "get-started"}
   .container.signup_form
     .row.vertical-align
@@ -14,7 +16,7 @@
           Enter your email below and lets
           %u get the process started!
         #signup
-          %form#signup_form{action: (post_url), method: "POST"}
+          %form#signup_form{action: (server_url), method: "GET", data: { conversion_pixel: (conversion_pixel)}}
             .field-wrapper
               %input#mce-EMAIL{:name => "EMAIL", :placeholder => "Your Work Email", :type => "email", :value => ""}/
               %input#mce-PLAN{:name => "PLAN", :type => "hidden", :value => "none"}/
