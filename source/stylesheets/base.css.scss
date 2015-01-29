@@ -9,7 +9,7 @@
 @import "blue.css";
 @import "responsive.css";
 
-$intro-image: "../images/backgrounds/busy_street.jpeg";
+$intro-image: "../images/backgrounds/busy_street_mini.jpeg";
 $signup-image: "../images/backgrounds/faces.jpg";
 $section-padding: 80px;
 $width-breakpoint: "min-width: 768px";
@@ -67,7 +67,8 @@ html, body {
 
 #intro {
   height: 100%;
-  background: url($intro-image) no-repeat center center fixed;
+  background-color: #ecf0f1;
+  /*background: url($intro-image) no-repeat center center fixed;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
