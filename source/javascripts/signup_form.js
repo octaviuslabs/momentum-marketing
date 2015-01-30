@@ -7,8 +7,8 @@ $(document).ready(function() {
   var messageArea = $(".message");
   var emailArea = $("#mce-EMAIL");
   var planArea = $('#mce-PLAN');
-  var invalidEmailInstructions = "<span style='color:#D91E18;'>The email address you entered was invalid. Please make sure you enter a valid email address to sign up.</span>";
-  var successInstructions = '<span style="color:#87D37C;">Great! Please confirm your email address by following the instructions we just sent you.</span>';
+  var invalidEmailInstructions = "<span style='color:#D91E18;'>There was an error. You must have already signed up!</span>";
+  var successInstructions = '<span style="color:#87D37C;">Great! You are now added to our group of beta users.</span>';
   var errorInstructions = "Could not connect to the registration server. Please send an email to hello {at} octaviuslabs.com";
   var conversionPixelUrl = signUpForm.data("conversion-pixel");
   var conversionPixel ='<img src="' + conversionPixelUrl + '" width="0" height="0">';
@@ -32,7 +32,6 @@ $(document).ready(function() {
             error       : function(err) { 
               ga('send', 'event', "signups", "new", plan_name + "_error");
               messageArea.html(invalidEmailInstructions);
-              messageArea.html(errorInstructions);
             },
             success     : function(data) {
                 if (data.id == "null") {
