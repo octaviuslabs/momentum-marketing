@@ -219,6 +219,13 @@ html, body {
   }
 }
 
+.message {
+  h2 {
+    text-align: center;
+    color: #87D37C;
+  }
+}
+
 #signup form input[type="submit"] {
   right: auto;
   width: 100%;

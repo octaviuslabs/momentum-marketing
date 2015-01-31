@@ -8,7 +8,7 @@ $(document).ready(function() {
   var emailArea = $("#mce-EMAIL");
   var planArea = $('#mce-PLAN');
   var invalidEmailInstructions = "<span style='color:#D91E18;'>There was an error. You must have already signed up!</span>";
-  var successInstructions = '<span style="color:#87D37C;">Great! You are now added to our group of beta users.</span>';
+  var successInstructions = '<h2>Great! You are now added to our group of beta users and will receive an email with further instructions.</h2>';
   var errorInstructions = "Could not connect to the registration server. Please send an email to hello {at} octaviuslabs.com";
   var conversionPixelUrl = signUpForm.data("conversion-pixel");
   var conversionPixel ='<img src="' + conversionPixelUrl + '" width="0" height="0">';
@@ -29,20 +29,28 @@ $(document).ready(function() {
             cache       : false,
             dataType    : 'json', 
             contentType: "application/json; charset=utf-8",
-            error       : function(err) { 
-              ga('send', 'event', "signups", "new", plan_name + "_error");
+            error       : function(err) {
+              var message = plan_name + "_error";
+              ga('send', 'event', "signups", "new", message);
+              ga('send', 'pageview', "signup_" + message);
               messageArea.html(invalidEmailInstructions);
             },
             success     : function(data) {
                 if (data.id == "null") {
-                  ga('send', 'event', "signups", "new", plan_name + "_error");
+                  var message = plan_name + "_error";
+                  ga('send', 'event', "signups", "new", message);
+                  ga('send', 'pageview', "signup_" + message);
                 } else {
-                  ga('send', 'event', "signups", "new", plan_name + "_success");
+                  var message = plan_name + "_success";
+                  ga('send', 'event', "signups", "new", message);
+                  ga('send', 'pageview', "signup_" + message);
                   window['optimizely'] = window['optimizely'] || [];
                   window.optimizely.push(["trackEvent", "newSignup"]);
-                  $("#mce-EMAIL").val("");
+                  $("#signup_form").remove();
+                  messageArea.hide();
                   messageArea.html(successInstructions);
                   messageArea.append(conversionPixel);
+                  messageArea.fadeIn();
                 }
             }
         });
@@ -59,7 +67,7 @@ function valid_email_address(email) {
 
 // Toggles Button
 function switch_plan_to(plan_name){
-  console.log("Set plan to " + plan_name);
+  // console.log("Set plan to " + plan_name);
   $('#mce-PLAN').val(plan_name);
   return plan_name;
 };

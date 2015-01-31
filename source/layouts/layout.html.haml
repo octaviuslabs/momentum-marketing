@@ -58,5 +58,7 @@
         });
     - else
       :javascript
-        function ga() {}; // stub out the ga method
+        function ga(){
+          console.log("Pushing " + JSON.stringify(arguments) + " To GA");
+        }; // stub out the ga method
     = javascript_include_tag "signup_form"
