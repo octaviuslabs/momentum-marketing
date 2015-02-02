@@ -10,4 +10,17 @@
           %span.icon-bar
           %span.icon-bar
         / Logo Image
-        = link_to image_tag("outreach_pro_logo.png", alt: "logo", height: "30", role: "banner"), "#" 
+        = link_to image_tag("outreach_pro_logo_lg.png", alt: "logo", role: "banner"), "#intro", class: "navbar-brand", data: { scroll: true }
+
+      / Navigation Menu
+      %nav#navigation-menu.collapse.navbar-collapse{:role => "navigation"}
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            = link_to "How It Works", "#how_it_works", id: "go_to_how_it_works", data: { scroll: true }
+          %li
+            = link_to "Tour", "#email_templates", id: "go_to_tour", data: { scroll: true }
+          %li
+            = link_to "Pricing", "#pricing", id: "go_to_pricing", data: { scroll: true }
+          %li
+            = link_to "Try It Out", "#get-started", class: "highlight", data: { scroll: true }
+      / End Navigation Menu

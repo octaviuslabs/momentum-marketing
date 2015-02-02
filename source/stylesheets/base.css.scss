@@ -55,6 +55,18 @@ html, body {
     padding:0;
 }
 
+.navbar-header {
+  img{
+    height: 38px;
+  }
+}
+
+.nav {
+  .highlight{
+    color: #f39c12;
+  }
+}
+
 .img-responsive {
   display: block;
   margin-left: auto;
