@@ -1,3 +1,29 @@
+%header#header
+  .navbar.navbar-fixed-top
+    .container
+      / Navigation Bar
+      .navbar-header
+        / Responsive Menu Button
+        %button#nav-toggle.navbar-toggle{"data-target" => "#navigation-menu", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        / Logo Image
+        = link_to image_tag("outreach_pro_logo_lg.png", alt: "logo", role: "banner"), "/#intro", class: "navbar-brand"
+
+      / Navigation Menu
+      %nav#navigation-menu.collapse.navbar-collapse{:role => "navigation"}
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            = link_to "How It Works", "/#how_it_works", id: "go_to_how_it_works"
+          %li
+            = link_to "Tour", "/#email_templates", id: "go_to_tour"
+          %li
+            = link_to "Pricing", "/#pricing", id: "go_to_pricing"
+          %li
+            = link_to "Try It Out", "/#get-started", class: "highlight"
+      / End Navigation Menu
 %section.privacy-policy
   .container
     .row

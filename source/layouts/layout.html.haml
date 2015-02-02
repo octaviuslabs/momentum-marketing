@@ -24,7 +24,6 @@
   %body
     - if build?
       = partial "layouts/top_body_scripts"
-    = partial "layouts/header"
     = yield
     = partial "layouts/footer" 
     = javascript_include_tag "all"
