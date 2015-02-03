@@ -20,21 +20,7 @@
     = partial "layouts/header_icons" 
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,800italic,800,700italic,700,600italic,600,400italic,300"
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Oswald:400,300,700"
-
-  %body
     - if build?
-      = partial "layouts/top_body_scripts"
-    = yield
-    = partial "layouts/footer" 
-    = javascript_include_tag "all"
-    / /[if lt IE 9]
-    /   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    /   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    :javascript
-      smoothScroll.init();
-    - if build?
-      - data.remote_keys.tracking_pixels.each do |pixel|
-        = image_tag pixel, height: "0", width: "0"
       :javascript
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -50,14 +36,28 @@
               ga('send', 'pageview', location.pathname + match[0]);
           })
         });
-      = javascript_include_tag "jquery.scrolldepth.min"
-      :javascript
-        jQuery(function() {
-          jQuery.scrollDepth();
-        });
     - else
       :javascript
         function ga(){
           console.log("Pushing " + JSON.stringify(arguments) + " To GA");
         }; // stub out the ga method
+  %body
+    - if build?
+      = partial "layouts/top_body_scripts"
+    = yield
+    = partial "layouts/footer" 
+    = javascript_include_tag "all"
+    / /[if lt IE 9]
+    /   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    /   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    :javascript
+      smoothScroll.init();
+    - if build?
+      - data.remote_keys.tracking_pixels.each do |pixel|
+        = image_tag pixel, height: "0", width: "0"
+      = javascript_include_tag "jquery.scrolldepth.min"
+      :javascript
+        jQuery(function() {
+          jQuery.scrollDepth();
+        });
     = javascript_include_tag "signup_form"
