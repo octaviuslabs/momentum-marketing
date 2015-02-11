@@ -4,7 +4,8 @@
     "production": "//registration.getoutreachpro.com/emails?c=?"
   },
   "tracking_pixels": [
-    "http://pixels.sbal4kp.com/centaur/targeting/450422995.gif"
+    "http://pixels.sbal4kp.com/centaur/targeting/450422995.gif",
+    "https://pixels.sbal4kp.com/centaur/conversion/100450417.gif"
   ],
   "conversion_pixels": {
     "development": "http://placehold.it/2x2",
