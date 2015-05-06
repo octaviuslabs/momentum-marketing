@@ -19,6 +19,7 @@
 // %script{:defer => "defer", :src => "jquery.validate.min" >>>>>>> keeping this in here
 //= require "waypoints.min"
 //= require "smooth-scroll.min"
+//= require "typed.min"
 //= require "custom"
 
 // Scrolling 
