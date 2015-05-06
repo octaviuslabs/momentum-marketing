@@ -8,14 +8,18 @@
 @import "style.css";
 @import "blue.css";
 @import "responsive.css";
+@import "typed_cursor.css";
 
-$intro-image: "../images/backgrounds/busy_street_mini.jpeg";
+// $intro-image: "https://dl.dropboxusercontent.com/u/2935/542092041.jpg";
+// $intro-image: "https://dl.dropboxusercontent.com/u/2935/542092039.jpg";
+$intro-image: "https://dl.dropboxusercontent.com/u/2935/549849807.jpg";
 $signup-image: "../images/backgrounds/faces.jpg";
 $section-padding: 80px;
 $width-breakpoint: "min-width: 768px";
+$theme-blue-hex: #46ABE0;
 
 @mixin vertical-alignment{
-  @media ($width-breakpoint) { 
+  @media ($width-breakpoint) {
     display: flex;
     align-items: center;
   }
@@ -38,8 +42,14 @@ $width-breakpoint: "min-width: 768px";
   transition: all ease 0.25s;
 }
 
+@mixin card-width($width-percent) {
+  @media ($width-breakpoint) {
+    height: $width-percent;
+  }
+}
+
 @mixin full-screen {
-  @media ($width-breakpoint) { 
+  @media ($width-breakpoint) {
     height: 100%;
   }
 }
@@ -77,26 +87,46 @@ html, body {
   padding-top: $section-padding;
 }
 
-#intro {
-  height: 100%;
-  background-color: #ecf0f1;
+
+.intro {
+  @include vertical-alignment;
+  @include card-width(80%);
+  background-color: #2c3e50;
+  color: #fff;
   background: url($intro-image) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: #fff;
+
+  #value-prop-typed {
+    text-transform: none;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #222;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+
+    small {
+      font-size: .75em;
+      color: #ecf0f1;
+    }
+  }
 
   .row {
     padding-top: $section-padding;
-    text-align: center;   
+    text-align: center;
   }
 }
 
 .overlay {
   @include vertical-alignment;
+  @include full-screen;
   background-image: url(../images/thumbs/overlay.png);
-  background-color: rgba(0, 0, 0, 0.70); 
+  background-color: rgba(0, 0, 0, 0.70);
   background-repeat: repeat;
   height: 100%;
 }
@@ -105,11 +135,12 @@ html, body {
   .steps {
     img {
       width: auto;
-      max-height: 300px;
+      max-height: 20em;
     }
-    h4 {
-      text-transform: uppercase;
-      padding-top: 20px;    
+    p {
+      font-size: 1em;
+      font-weight: normal;
+      padding-top: 1em;
     }
 
     h3 {
@@ -119,8 +150,36 @@ html, body {
     }
   }
   .action {
-    padding-top: 20px;
+    padding-top: 1.5em;
     text-align: center;
+  }
+}
+
+.sub-intro {
+  @include card-width(33%);
+  @include vertical-alignment;
+  text-align: center;
+  background-color: #95a5a6;
+  h1 {
+    color: #ecf0f1;
+  }
+}
+
+.proof {
+  @include card-width(33%);
+  @include vertical-alignment;
+  background-color: #ecf0f1;
+  text-align: center;
+  padding: 3em 0em 3em 0em;
+  img {
+    max-height: 100px;
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+  }
+
+  h4 {
+    font-style: italic;
+    color: #bdc3c7;
   }
 }
 
@@ -138,27 +197,27 @@ html, body {
 
 .white {
   @extend .tour;
-  background-color: #ffffff; 
+  background-color: #ffffff;
 }
 
 .grey {
   @extend .tour;
-  background-color: #f5f5f5; 
+  background-color: #f5f5f5;
 }
 
 .pricing {
   @extend .tour;
   height: auto;
-  background-color: #bdc3c7; 
+  background-color: #bdc3c7;
   border-bottom: 1px solid #eee;
 
   .price-col {
     padding-bottom: 10px;
   }
-} 
+}
 
 .header-button {
-  @include header-button(#008ED6);
+  @include header-button(#27ae60);
 }
 
 .header-button-secondary {
@@ -181,7 +240,7 @@ html, body {
 }
 
 #signup {
-  .button-wrapper { 
+  .button-wrapper {
     padding-top: 5px;
   }
 }
@@ -241,8 +300,8 @@ html, body {
 #signup form input[type="submit"] {
   right: auto;
   width: 100%;
-  @media ($width-breakpoint) { 
-    width: 25%;
+  @media ($width-breakpoint) {
+    width: 33%;
   }
   background-color: #f39c12;
   border: 1px solid #f39c12;
@@ -264,4 +323,12 @@ html, body {
 
 #signup form input[type="submit"]:hover {
   background-color: #f39c12;
+}
+
+.btn-theme {
+  background-color: $theme-blue-hex;
+}
+
+#scrollUp {
+  background-color: rgba(70, 171, 224, 0.85);
 }

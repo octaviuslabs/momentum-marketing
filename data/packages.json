@@ -1,25 +1,24 @@
 {
   "beta_tester": {
-    "name": "BETA TESTER",
-    "id": "beta-testers",
+    "name": "TRIAL",
+    "id": "trial",
     "pricing_dollars": "0",
     "pricing_cents": "00",
     "features": [
-      "Free for the <strong>first 120 DAYS</strong>",
-      "Same features as unlimited plan" 
-    ]   
+      "Free for the <strong>first 14 DAYS</strong>",
+      "Same features as unlimited plan"
+    ]
   },
   "unlimited_forver": {
-    "name": "Unlimited Forever",
-    "id": "unlimited-forver",
-    "pricing_dollars": "19",
+    "name": "Unlimited",
+    "id": "unlimited",
+    "pricing_dollars": "29",
     "pricing_cents": "99",
     "features": [
-      "<strong>Unlimited</strong> email templates",
-      "Generate <strong>Unlimited</strong> profiles",
-      "Schedule <strong>UNLIMITED</strong> EMAILS",
-      "Access to analytics",
+      "<strong>UNLIMITED</strong> recommendations",
+      "<strong>UNLIMITED</strong> email templates",
+      "Send <strong>UNLIMITED</strong> emails",
       "12 Hour support turnaround"
-    ]   
+    ]
   }
 }
