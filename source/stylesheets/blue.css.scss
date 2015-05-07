@@ -1,15 +1,4 @@
-
-/*Template Name: xLander - Premium Flexible Landing Page Template
-Theme URL: http://themeforest.net/user/DSA79/
-Description: xLander - Premium Flexible Landing Page Template
-Author: DSA79
-Author URL: http://themeforest.net/user/DSA79
-Version: 1.0.0
-Website: www.dsathemes.com
-Tags: responsive, premium template, html5 template, one page, landing page, business, corporate, project
-*/
-
-
+@import "theme_colors";
 
 /* ------------------------------------------ */
 /*             TABLE OF CONTENTS
@@ -57,7 +46,7 @@ Tags: responsive, premium template, html5 template, one page, landing page, busi
 }
 
 /*------------------------------------------*/
-/*	 Preload Animation 
+/*	 Preload Animation
 /*------------------------------------------*/
 
 .animationload {
@@ -66,13 +55,13 @@ Tags: responsive, premium template, html5 template, one page, landing page, busi
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #262626; 
-	z-index: 999999; 
+	background-color: #262626;
+	z-index: 999999;
 }
 .loader {
 	position: absolute;
-	top: 50%; 
-	left: 50%; 
+	top: 50%;
+	left: 50%;
 	margin: -100px 0 0 -100px;
 	width: 200px;
 	height: 200px;
@@ -81,13 +70,13 @@ Tags: responsive, premium template, html5 template, one page, landing page, busi
 	background-repeat: no-repeat;
 	background-size: 70px 70px;
 }
-       
+
 /*------------------------------------------*/
 /*	 Headers
 /*------------------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
-	margin-top: 0; 
+	margin-top: 0;
 	margin-bottom: 10px;
 }
 
@@ -124,14 +113,14 @@ a:focus {
 	outline: none;
 	border: none;
 	text-decoration: none;
-} 
+}
 
 /*------------------------------------------*/
 /*	 Theme Button
 /*------------------------------------------*/
 
 .btn-theme {
-	background-color: #008ED6;
+	background-color: $theme-blue-hex;
 	color: #fff;
 	font-size: 14px;
 	text-transform: uppercase;
@@ -192,7 +181,7 @@ a:focus {
     content: "";
     height: 2px;
     width: 200px;
-	background: #008ED6;
+	background: $theme-blue-hex;
     margin: 15px auto;
     position: relative;
 }
@@ -204,18 +193,18 @@ a:focus {
    ========================================================================== */
 
 /*------------------------------------------*/
-/*	 Logo Image    
+/*	 Logo Image
 /*------------------------------------------*/
 
 .navbar-brand {
 	padding: 10px 15px;
-}  
-     
+}
+
 /*------------------------------------------*/
-/*	 Navigation Menu    
+/*	 Navigation Menu
 /*------------------------------------------*/
 
-.navbar {	
+.navbar {
 	margin-bottom: 0;
 	-webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -228,7 +217,7 @@ a:focus {
 	transition: all 350ms ease-in-out;
 }
 
-.navbar-fixed-top { 
+.navbar-fixed-top {
 	background-color: rgba(30, 30, 30, 0.45);
 	border-bottom: none;
 }
@@ -249,14 +238,14 @@ a:focus {
 }
 
 /*------------------------------------------*/
-/*	 Navbar Scroll   
+/*	 Navbar Scroll
 /*------------------------------------------*/
 
 .scroll-fixed-navbar {
 	padding: 0;
 }
 
-.scroll-fixed-navbar.navbar-fixed-top { 
+.scroll-fixed-navbar.navbar-fixed-top {
 	background-color: #262626;
 	border-bottom: 1px solid #222;
 }
@@ -267,12 +256,12 @@ a:focus {
 
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a.selected-nav {
-	color: #008ED6;
+	color: $theme-blue-hex;
 	background-color: transparent;
 }
 
 /*------------------------------------------*/
-/*	 Responsive Menu    
+/*	 Responsive Menu
 /*------------------------------------------*/
 
 .navbar-toggle {
@@ -300,18 +289,18 @@ a:focus {
 	width: 100%;
   background-image: url(../images/thumbs/hero_background_mini.jpg);
 	background-repeat: no-repeat;
-	background-position: center center;		
+	background-position: center center;
 	background-size: cover;
 	color: #fff;
 }
 */
 /*------------------------------------------*/
-/*	 Overlay Pattern 
+/*	 Overlay Pattern
 /*------------------------------------------*/
 
 /*.overlay {
 	background-image: url(../images/thumbs/overlay.png);
-	background-color: rgba(0, 0, 0, 0.4); 
+	background-color: rgba(0, 0, 0, 0.4);
 	background-repeat: repeat;
 	height: 100%;
 }*/
@@ -329,7 +318,7 @@ a:focus {
 /*	 INTRO TEXT
 /*------------------------------------------*/
 
-#intro h2 {	
+#intro h2 {
 	font-size: 75px;
 	font-weight: 800;
 	line-height: 85px;
@@ -338,7 +327,7 @@ a:focus {
 	letter-spacing: 1px;
 }
 
-#intro h3 {	
+#intro h3 {
 	font-size: 34px;
 	font-weight: 800;
 	line-height: 34px;
@@ -346,7 +335,7 @@ a:focus {
 	margin-bottom: 20px;
 }
 
-.intro_text p {	
+.intro_text p {
 	font-size: 18px;
 	font-weight: 300;
 	line-height: 28px;
@@ -366,10 +355,10 @@ a:focus {
 }
 
 /*------------------------------------------*/
-/*	 INTRO REGISTER FORM 
+/*	 INTRO REGISTER FORM
 /*------------------------------------------*/
 
-.form_register form {	
+.form_register form {
 	background-color: rgba(20, 20,20, 0.65);
 	border: 1px solid #333;
 	-webkit-border-radius: 8px;
@@ -423,14 +412,14 @@ textarea {
 
 .form-control:focus {
 	background-color: #f0f0f0;
-	border-color: #008ED6; 
+	border-color: $theme-blue-hex;
 	outline: 0;
-	-webkit-box-shadow: inset 0 1px 1px #008ED6, 0 0 3px #008ED6;
-	box-shadow: inset 0 1px 1px #008ED6, 0 0 3px #008ED6;
+	-webkit-box-shadow: inset 0 1px 1px $theme-blue-hex, 0 0 3px $theme-blue-hex;
+	box-shadow: inset 0 1px 1px $theme-blue-hex, 0 0 3px $theme-blue-hex;
 }
 
 /*------------------------------------------*/
-/*	   Register Form Error Message 
+/*	   Register Form Error Message
 /*------------------------------------------*/
 
 .error {
@@ -449,15 +438,15 @@ textarea {
 #about {
 	padding-top: 80px;
 	padding-bottom: 80px;
-} 
+}
 
 /*------------------------------------------*/
 /*	TABS HOLDER IMAGE
 /*------------------------------------------*/
 
-#tabs-holder .img-responsive { 
-	display: inline-block; 
-} 
+#tabs-holder .img-responsive {
+	display: inline-block;
+}
 
 /*------------------------------------------*/
 /*	TABS
@@ -474,7 +463,7 @@ textarea {
     font-weight: 400;
 	text-transform: uppercase;
 	padding: 0;
-	border: none;	
+	border: none;
 }
 
 .nav-tabs > li:first-child {
@@ -486,16 +475,16 @@ textarea {
 	padding-left: 20px;
 }
 
-.nav-tabs > li.active > a, 
-.nav-tabs > li.active > a:hover, 
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-	color: #008ED6;
+	color: $theme-blue-hex;
 	border: none;
 	padding: 0;
 }
 
 .nav-tabs > li > a:hover {
-	color: #008ED6;
+	color: $theme-blue-hex;
 	border: none;
 }
 
@@ -527,19 +516,19 @@ textarea {
    ========================================================================== */
 
 #about-1 {
-	background-color: #f5f5f5; 
+	background-color: #f5f5f5;
 	border-top: 1px solid #eee;
 	padding-top: 80px;
 	padding-bottom: 80px;
-} 
-   
+}
+
 /*------------------------------------------*/
 /*	ACCORDION HOLDER IMAGE
 /*------------------------------------------*/
 
-#accordion-holder .img-responsive { 
-	display: inline-block; 
-}  
+#accordion-holder .img-responsive {
+	display: inline-block;
+}
 
 /*------------------------------------------*/
 /*	ACCORDION
@@ -584,7 +573,7 @@ textarea {
 }
 
 .panel-title > a:hover {
-    color: #008ED6;
+    color: $theme-blue-hex;
 }
 
 /*------------------------------------------*/
@@ -592,13 +581,13 @@ textarea {
 /*------------------------------------------*/
 
 .panel-title i {
-	color: #008ED6;
+	color: $theme-blue-hex;
 	font-size: 28px;
 	margin-right: 10px;
 }
 
 /*------------------------------------------*/
-/*	Panel Content 
+/*	Panel Content
 /*------------------------------------------*/
 
 .panel-body {
@@ -623,11 +612,11 @@ textarea {
    06. SKILLS
    ========================================================================== */
 
-#skills {	
+#skills {
 	background-image: url(../images/parallax_bg/skills.jpg);
 	background-attachment: fixed !important;
 	background-repeat: no-repeat;
-	background-position: bottom center;		
+	background-position: bottom center;
 	background-size: cover;
 	padding-top: 80px;
 	padding-bottom: 80px;
@@ -651,7 +640,7 @@ textarea {
     content: "";
     height: 2px;
     width: 100px;
-	background: #008ED6;
+	background: $theme-blue-hex;
     margin: 15px auto;
     position: relative;
 }
@@ -690,7 +679,7 @@ textarea {
 
 #skills h4 {
     font-size: 24px;
-	font-weight: 700; 
+	font-weight: 700;
 	margin-top: 25px;
 }
 
@@ -709,8 +698,8 @@ textarea {
 /*	  SERVICE IMAGE
 /*------------------------------------------*/
 
-#services_image .img-responsive { 
-	display: inline-block; 
+#services_image .img-responsive {
+	display: inline-block;
 	margin-bottom: 80px;
 }
 
@@ -755,9 +744,9 @@ textarea {
 /* ==========================================================================
    08. FEATURES
    ========================================================================== */
- 
+
 #features {
-	background-image: url(../images/parallax_bg/features.jpg); 
+	background-image: url(../images/parallax_bg/features.jpg);
 	background-attachment: fixed !important;
 	background-repeat: repeat;
 	background-position: 0 0;
@@ -770,7 +759,7 @@ textarea {
 /*	  FEATURES TITLEBAR
 /*------------------------------------------*/
 
-#features .titlebar h3, #features .titlebar h2 { 
+#features .titlebar h3, #features .titlebar h2 {
 	color: #fff;
 }
 
@@ -797,7 +786,7 @@ textarea {
 }
 
 .icon-box i {
-	color: #008ED6;
+	color: $theme-blue-hex;
     font-size: 60px;
 	margin-top: 10px;
 }
@@ -836,18 +825,18 @@ textarea {
 }
 
 /*------------------------------------------*/
-/*	 TIMELINE 
+/*	 TIMELINE
 /*------------------------------------------*/
 
 .timeline {
     background-image: url(../images/thumbs/timeline-bg.png);
 	background-repeat: repeat-y;
-	background-position: center center;	
-	background-color: transparent;	
+	background-position: center center;
+	background-color: transparent;
 }
 
 /*------------------------------------------*/
-/*	 TIMELINE YEAR 
+/*	 TIMELINE YEAR
 /*------------------------------------------*/
 
 .timeline-year {
@@ -863,7 +852,7 @@ textarea {
 }
 
 .timeline-year span {
-    background-color: #008ED6;
+    background-color: $theme-blue-hex;
     color: #fff;
 	font-size: 20px;
 	font-family: 'Oswald', sans-serif;
@@ -872,7 +861,7 @@ textarea {
 }
 
 /*------------------------------------------*/
-/*	 TIMELINE ITEM 
+/*	 TIMELINE ITEM
 /*------------------------------------------*/
 
 .timeline-item {
@@ -885,15 +874,15 @@ textarea {
 	height: 30px;
     background-color: #fff;
 	border: 2px solid #d5d5d5;
-    content: "";   
+    content: "";
     position: absolute;
     left: 50%;
     top: 50%;
     margin-top: -15px;
-    margin-left: -15px;	
-	-webkit-border-radius: 50%; 
-    -moz-border-radius: 50%; 
-    border-radius: 50%; 
+    margin-left: -15px;
+	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
 }
 
 .timeline-item-content {
@@ -910,9 +899,9 @@ textarea {
 /*	Timeline Item Content Arrow
 /*------------------------------------------*/
 
-.timeline-item-content:before {  
+.timeline-item-content:before {
     width: 20px;
-    height: 20px;  
+    height: 20px;
     background-color: #f5f5f5;
 	content: "";
 	position: absolute;
@@ -931,7 +920,7 @@ textarea {
     left: -10px;
 }
 
-.timeline-item-content h4 { 
+.timeline-item-content h4 {
     font-size: 20px;
 	font-weight: 400;
 }
@@ -953,8 +942,8 @@ textarea {
 }
 
 .timeline-item:hover.timeline-item:before {
-	background-color: #008ED6;
-	border-color: #008ED6;
+	background-color: $theme-blue-hex;
+	border-color: $theme-blue-hex;
 }
 
 .timeline-item:hover .timeline-item-content.pull-right:before {
@@ -965,21 +954,21 @@ textarea {
 
 /* ==========================================================================
    10. STATISTIC BANNER
-   ========================================================================== */  
-   
+   ========================================================================== */
+
 #statistic_banner {
 	background-image: url(../images/parallax_bg/statistic-banner.jpg);
 	background-attachment: fixed !important;
 	background-repeat: no-repeat;
-	background-position: top center;		
+	background-position: top center;
 	background-size: cover;
 	padding-top: 80px;
 	padding-bottom: 80px;
-} 
+}
 
 /*------------------------------------------*/
 /*	  STATISTIC BANNER TITLEBAR
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 #statistic_banner .titlebar h3,
 #statistic_banner .titlebar h2 {
@@ -988,7 +977,7 @@ textarea {
 
 /*------------------------------------------*/
 /*	  STATISTIC BLOCK
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 .statistic-block {
 	text-align: center;
@@ -1018,8 +1007,8 @@ textarea {
 	font-weight: 300;
 	text-transform: uppercase;
 }
-   
-   
+
+
 /* ==========================================================================
    11. LATEST WORKS
    ========================================================================== */
@@ -1030,7 +1019,7 @@ textarea {
 
 /*------------------------------------------*/
 /*	   PORTFOLIO TITLEBAR
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 #portfolio .titlebar {
 	margin-bottom: 40px;
@@ -1038,7 +1027,7 @@ textarea {
 
 /*------------------------------------------*/
 /*	  FILTER BUTTONS
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 #gallery-filter {
 	margin-bottom: 50px;
@@ -1050,7 +1039,7 @@ textarea {
 
 /*------------------------------------------*/
 /*	   Button Settings
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 #gallery-filter .btn-group > .btn {
 	background: #f4f4f4;
@@ -1069,7 +1058,7 @@ textarea {
 	-moz-transition: all 300ms ease-in-out;
 	-o-transition: all 300ms ease-in-out;
 	-ms-transition: all 300ms ease-in-out;
-	transition: all 300ms ease-in-out; 
+	transition: all 300ms ease-in-out;
 }
 
 .btn-group > .btn:first-child:not(:last-child),
@@ -1081,28 +1070,28 @@ textarea {
 
 /*------------------------------------------*/
 /*	   Filter Button Hover
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 #gallery-filter .btn-group > .btn:hover {
 	color: #fff;
-	background-color: #008ED6;
+	background-color: $theme-blue-hex;
 }
 
 /*------------------------------------------*/
 /*	  Filter Button Active
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 #gallery-filter .btn-group > .btn.active,
 #gallery-filter .btn-group > .btn.focus {
 	color: #fff;
-	background-color: #008ED6;
+	background-color: $theme-blue-hex;
 	box-shadow: 0 0 0 0;
 	cursor: default;
 }
 
 /*------------------------------------------*/
 /*	  PORTFOLIO IMAGES HOLDER
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 .portfolio-items-list {
 	margin: 0;
@@ -1110,13 +1099,13 @@ textarea {
 
 /*------------------------------------------*/
 /*	  Portfolio Item
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 .portfolio-item {
-	position: relative;	
+	position: relative;
 	display: none;
     opacity: 0;
-	-moz-opacity: 0; 
+	-moz-opacity: 0;
 	padding: 0;
 	text-align: center;
 }
@@ -1140,8 +1129,8 @@ textarea {
 }
 
 /*------------------------------------------*/
-/*	  Overlay Content 
-/*------------------------------------------*/ 
+/*	  Overlay Content
+/*------------------------------------------*/
 
 .overlay-content {
 	position: absolute;
@@ -1173,12 +1162,12 @@ textarea {
 }
 
 /*------------------------------------------*/
-/*	  Overlay Background 
-/*------------------------------------------*/ 
+/*	  Overlay Background
+/*------------------------------------------*/
 
 .item-overlay {
 	opacity: 0;
-	-moz-opacity: 0; 
+	-moz-opacity: 0;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1192,8 +1181,8 @@ textarea {
 }
 
 /*------------------------------------------*/
-/*	  Image Hover Effect 
-/*------------------------------------------*/ 
+/*	  Image Hover Effect
+/*------------------------------------------*/
 
 .hover-overlay:hover > img {
 	transform: scale(1.2);
@@ -1204,14 +1193,14 @@ textarea {
 }
 
 .hover-overlay:hover .item-overlay {
-	opacity: 1; 
-	-moz-opacity: 1; 
+	opacity: 1;
+	-moz-opacity: 1;
 }
 
 .portfolio-item:hover .overlay-content {
 	bottom: 40%;
-	opacity: 1; 
-	-moz-opacity: 1; 
+	opacity: 1;
+	-moz-opacity: 1;
 }
 
 
@@ -1219,10 +1208,10 @@ textarea {
 /* ==========================================================================
    12. TEAM
    ========================================================================== */
-   
+
 #team {
 	padding-top: 80px;
-	padding-bottom: 30px;	
+	padding-bottom: 30px;
 }
 
 /*------------------------------------------*/
@@ -1249,7 +1238,7 @@ textarea {
 
 .team-img-meta h6 {
 	font-size: 14px;
-	color: #008ED6;
+	color: $theme-blue-hex;
 	text-transform: uppercase;
 	font-weight: 400;
 	margin-bottom: 10px;
@@ -1263,7 +1252,7 @@ textarea {
 }
 
 /*------------------------------------------*/
-/*	  Team Member Social Icons 
+/*	  Team Member Social Icons
 /*------------------------------------------*/
 
 .team-member-socials {
@@ -1284,7 +1273,7 @@ textarea {
     width: 30px;
     height: 30px;
 	color: #666;
-	font-size: 16px; 
+	font-size: 16px;
     text-align: center;
     display: block;
     text-decoration: none;
@@ -1300,7 +1289,7 @@ textarea {
 }
 
 /*------------------------------------------*/
-/*	 Team Member Social Icons Hover 
+/*	 Team Member Social Icons Hover
 /*------------------------------------------*/
 
 .page_social.ico_facebook:hover {color: #3b5998;}
@@ -1332,11 +1321,11 @@ textarea {
 
 
 /* ==========================================================================
-   13. PRICING 
+   13. PRICING
    ========================================================================== */
 
 /*#pricing {
-	background-color: #f5f5f5; 
+	background-color: #f5f5f5;
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
 	padding-top: 80px;
@@ -1370,7 +1359,7 @@ textarea {
 	line-height: 100px;
 	text-transform: uppercase;
 	margin-bottom: 0;
-} 
+}
 
 /*------------------------------------------*/
 /*	 Table Price Plan
@@ -1411,7 +1400,7 @@ textarea {
 
 .pricing-table ul.features li {
     border-bottom: 1px solid #ccc;
-    padding: 13px 0; 
+    padding: 13px 0;
 }
 
 /*------------------------------------------*/
@@ -1427,7 +1416,7 @@ textarea {
 /*------------------------------------------*/
 
 .pricing-table.highlight  {
-	background-color: #008ED6;
+	background-color: $theme-blue-hex;
 	border-color: #2793b6;
 }
 
@@ -1463,16 +1452,16 @@ textarea {
 }
 
 
-   
+
 /* ==========================================================================
    14. CLIENTS
    ========================================================================== */
- 
+
 #clients {
 	padding-top: 80px;
 	padding-bottom: 150px;
 	position: relative;
-}	
+}
 
 /*------------------------------------------*/
 /*	 CLIENTS CAROUSEL NAVIGATION
@@ -1497,20 +1486,20 @@ textarea {
 
 
 /* ==========================================================================
-   15 TESTIMONIALS 
+   15 TESTIMONIALS
    ========================================================================== */
 
 #testimonials {
-	background-color: #f5f5f5; 
+	background-color: #f5f5f5;
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
 	padding-top: 80px;
 	padding-bottom: 80px;
-}   
+}
 
 /*------------------------------------------*/
 /*	  TESTIMONIALS TITLEBAR
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 #testimonials h3 {
 	font-size: 28px;
@@ -1520,14 +1509,14 @@ textarea {
 }
 
 #testimonials .clients-counter {
-	color:  #008ED6;
+	color:  $theme-blue-hex;
 	font-size: 30px;
 	font-weight: 700;
 }
 
 /*------------------------------------------*/
-/*	  Testimonial Message 
-/*------------------------------------------*/ 
+/*	  Testimonial Message
+/*------------------------------------------*/
 
 .testi-content {
 	background-color: #fff;
@@ -1549,7 +1538,7 @@ textarea {
 
 /*------------------------------------------*/
 /*	  Testimonial Message Arrow
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 .testi-arrow {
 	height: 32px;
@@ -1561,12 +1550,12 @@ textarea {
 	background-color: transparent;
 	position: absolute;
 	top: 100%;
-	left: 47%;	
+	left: 47%;
 }
 
 /*------------------------------------------*/
-/*	  Testimonial Message Avatar 
-/*------------------------------------------*/ 
+/*	  Testimonial Message Avatar
+/*------------------------------------------*/
 
 .testimonial .client-img {
 	width: 65px;
@@ -1584,7 +1573,7 @@ textarea {
 
 /*------------------------------------------*/
 /*	  Testimonial Message Author
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 .testimonial .testi-author {
 	display: inline-block;
@@ -1618,19 +1607,19 @@ textarea {
 #blog {
 	padding-top: 80px;
 	padding-bottom: 50px;
-} 
+}
 
 /*------------------------------------------*/
 /*	  BLOG ARTICLE
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 #blog article {
-	margin-bottom: 50px;  
+	margin-bottom: 50px;
 }
 
 /*------------------------------------------*/
 /*	  Blog Post Titlebar
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 #blog .blog-post-titlebar h4 {
 	font-size: 15px;
@@ -1642,7 +1631,7 @@ textarea {
 
 /*------------------------------------------*/
 /*	  Blog Post Meta
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 .blog-post-info {
 	color: #666;
@@ -1651,12 +1640,12 @@ textarea {
 }
 
 .blog-post-info a {
-	color: #008ED6;
+	color: $theme-blue-hex;
 }
 
 /*------------------------------------------*/
 /*	  Blog Post Description
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 .blog-post-desc {
 	line-height: 24px;
@@ -1665,7 +1654,7 @@ textarea {
 
 /*------------------------------------------*/
 /*	  Blog Post Button
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 #blog .btn-theme {
 	font-size: 13px;
@@ -1677,7 +1666,7 @@ textarea {
 
 /*------------------------------------------*/
 /*	  Video Content Settings
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 .video-block {
 	position: relative;
@@ -1702,28 +1691,28 @@ textarea {
 
 /* ==========================================================================
    17. PROMO LINE
-   ========================================================================== */ 
+   ========================================================================== */
 
 #promo_line {
-	background-image: url(../images/parallax_bg/promo-line.jpg); 
+	background-image: url(../images/parallax_bg/promo-line.jpg);
 	background-attachment: fixed !important;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding-top: 80px;
 	padding-bottom: 80px;
-}   
+}
 
 /*------------------------------------------*/
 /*	 PROMO LINE CONTENT
-/*------------------------------------------*/  
+/*------------------------------------------*/
 
 #promo_line h2 {
 	color: #fff;
 	font-size: 36px;
 	line-height: 42px;
 	font-weight: 400;
-	letter-spacing: 2px; 
+	letter-spacing: 2px;
 	text-transform: uppercase;
 	margin-bottom: 5px;
 }
@@ -1743,17 +1732,17 @@ textarea {
 
 
 /* ==========================================================================
-   18. CONTACT-INFO 
+   18. CONTACT-INFO
    ========================================================================== */
 
 #contact-info {
 	padding-top: 80px;
 	padding-bottom: 30px;
-} 
+}
 
 /*------------------------------------------*/
 /*	 Contact Info
-/*------------------------------------------*/  
+/*------------------------------------------*/
 
 .contact-info {
     margin-bottom: 40px;
@@ -1761,10 +1750,10 @@ textarea {
 
 /*------------------------------------------*/
 /*	 Contact Info Icon
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 .contact-info .fa {
-    color: #008ED6;
+    color: $theme-blue-hex;
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 10px;
@@ -1772,7 +1761,7 @@ textarea {
 
 /*------------------------------------------*/
 /*	 Contact Text
-/*------------------------------------------*/ 
+/*------------------------------------------*/
 
 .contact-info h4 {
 	color: #222;
@@ -1789,12 +1778,12 @@ textarea {
 }
 
 .contact-info a {
-	color: #008ED6;
+	color: $theme-blue-hex;
 	font-weight: 700;
 }
 
 .contact-info a:hover {
-  color: #008ED6;
+  color: $theme-blue-hex;
 }
 
 
@@ -1845,8 +1834,8 @@ textarea {
 
 /* ==========================================================================
    20. FOOTER
-   ========================================================================== */ 
- 
+   ========================================================================== */
+
 #footer {
 	padding-top: 80px;
 	padding-bottom: 60px;
@@ -1858,7 +1847,7 @@ textarea {
 /*------------------------------------------*/
 
 #signup {
-	margin-bottom: 10px;	
+	margin-bottom: 10px;
 }
 
 #signup h3 {
@@ -1908,8 +1897,8 @@ textarea {
 /*#signup form input[type="submit"] {
   right: auto;
 	width: 25%;
-	background-color: #008ED6;
-	border: 1px solid #008ED6;
+	background-color: $theme-blue-hex;
+	border: 1px solid $theme-blue-hex;
 	color: #fff;
 	font-size: 16px;
   font-weight: 900;
@@ -1937,17 +1926,17 @@ textarea {
 }
 
 #footer_copyright p span {
-	color: #008ED6;
+	color: $theme-blue-hex;
 	font-size: 15px;
 	font-weight: 800;
 }
 
 /*------------------------------------------*/
-/*	 Footer Social Icons  
+/*	 Footer Social Icons
 /*------------------------------------------*/
 
 .contact-socials {
-	display: inline-block; 
+	display: inline-block;
 	padding-left: 0;
 
 }
@@ -1962,7 +1951,7 @@ textarea {
 }
 
 /*------------------------------------------*/
-/*	 Footer Social Icon Setting 
+/*	 Footer Social Icon Setting
 /*------------------------------------------*/
 
 .foo_social {
@@ -1986,7 +1975,7 @@ textarea {
 }
 
 /*------------------------------------------*/
-/*	 Footer Social Icons Hover 
+/*	 Footer Social Icons Hover
 /*------------------------------------------*/
 
 .foo_social.ico-facebook:hover {background-color: #3b5998; color: #fff;}
@@ -2030,50 +2019,50 @@ textarea {
 	background-image: url(../images/icons/back-to-top.png);
 	background-repeat: no-repeat;
 	background-position: 50% 48%;
-	background-color:rgba(45, 162, 200, 0.85);	
+	background-color:rgba(45, 162, 200, 0.85);
 	-webkit-transition: all 250ms linear;
 	-moz-transition: all 250ms linear;
-	transition: all 250ms linear;	
+	transition: all 250ms linear;
 }
 
 #scrollUp:hover {
-	background-color:rgba(45, 162, 200, 1);	
+	background-color:rgba(45, 162, 200, 1);
 }
 
-nav a#pull {  
-    display: none;  
+nav a#pull {
+    display: none;
 }
 
 
 
 /* ==========================================================================
-   22. CONTACT FORM RESPONSE PAGE   
+   22. CONTACT FORM RESPONSE PAGE
    ========================================================================== */
 
 #form_response {
-	margin: 50px auto; 
+	margin: 50px auto;
 }
 
-#form_response .img-responsive { 
+#form_response .img-responsive {
 	display: inline-block;
 }
 
 #form_response h1 {
-	font-size: 26px; 
+	font-size: 26px;
 	font-weight: 400;
 	margin-top: 10px;
 	text-transform: uppercase;
 }
 
 #form_response p {
-	font-size: 16px; 
+	font-size: 16px;
 	font-weight: 300;
 	line-height:24px;
 	margin-bottom: 20px;
 }
 
 #form_response .btn-theme {
-	background-color: #008ED6;
+	background-color: $theme-blue-hex;
 	color: #333;
 	font-size: 14px;
 	text-transform: uppercase;
@@ -2087,7 +2076,7 @@ nav a#pull {
 }
 
 #form_response .btn-theme:hover {
-	background-color: #008ED6;
+	background-color: $theme-blue-hex;
 	color: #fff;
 }
 
@@ -2096,5 +2085,3 @@ nav a#pull {
   padding: 20px;
   width: 75%;
 }
-
-
