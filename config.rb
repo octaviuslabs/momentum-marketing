@@ -37,7 +37,7 @@
 
 configure :development do
   activate :livereload
-  
+
 end
 
 # Methods defined in the helpers block are available in templates
@@ -52,6 +52,9 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+set :url_root, 'http://www.meetvesper.com'
+activate :search_engine_sitemap
 
 # Build-specific configuration
 configure :build do
