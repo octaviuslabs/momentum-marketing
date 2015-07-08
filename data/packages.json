@@ -5,14 +5,14 @@
     "pricing_dollars": "0",
     "pricing_cents": "00",
     "features": [
-      "Free for the <strong>first 14 DAYS</strong>",
+      "Free for the <strong>first 30 DAYS</strong>",
       "Same features as unlimited plan"
     ]
   },
   "unlimited_forver": {
     "name": "Unlimited",
     "id": "unlimited",
-    "pricing_dollars": "29",
+    "pricing_dollars": "79",
     "pricing_cents": "99",
     "features": [
       "<strong>UNLIMITED</strong> recommendations",
