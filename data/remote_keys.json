@@ -1,6 +1,6 @@
 {
   "email_server": {
-    "development": "http://localhost:3000/emails?c=?",
+    "development": "http://docker-vm:4040/emails?c=?",
     "production": "//registration.getoutreachpro.com/emails?c=?"
   },
   "tracking_pixels": [
