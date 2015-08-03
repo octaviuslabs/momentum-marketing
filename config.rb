@@ -53,7 +53,7 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
-set :url_root, 'http://www.meetvesper.com'
+set :url_root, 'http://www.vesper.ai'
 activate :search_engine_sitemap
 
 # Build-specific configuration
