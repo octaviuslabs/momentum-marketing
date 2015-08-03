@@ -26,33 +26,33 @@
       })
     });
 
-  / Qualaroo
-  :javascript
-    var _kiq = _kiq || [];
-    (function(){
-      setTimeout(function(){
-      var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
-      s.async = true; s.src = '//s3.amazonaws.com/ki.js/56964/cDn.js'; f.parentNode.insertBefore(s, f);
-      }, 1);
-    })();
-
-  / AdRoll
-  :javascript
-    adroll_adv_id = "IXGBEE3ZO5DVRLWNMQ6TLY";
-    adroll_pix_id = "MJ557TYHSJD7NBBWTUXOMV";
-    (function () {
-    var oldonload = window.onload;
-    window.onload = function(){
-       __adroll_loaded=true;
-       var scr = document.createElement("script");
-       var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-       scr.setAttribute('async', 'true');
-       scr.type = "text/javascript";
-       scr.src = host + "/j/roundtrip.js";
-       ((document.getElementsByTagName('head') || [null])[0] ||
-        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-       if(oldonload){oldonload()}};
-    }());
+  -# / Qualaroo
+  -# :javascript
+  -#   var _kiq = _kiq || [];
+  -#   (function(){
+  -#     setTimeout(function(){
+  -#     var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
+  -#     s.async = true; s.src = '//s3.amazonaws.com/ki.js/56964/cDn.js'; f.parentNode.insertBefore(s, f);
+  -#     }, 1);
+  -#   })();
+  -#
+  -# / AdRoll
+  -# :javascript
+  -#   adroll_adv_id = "IXGBEE3ZO5DVRLWNMQ6TLY";
+  -#   adroll_pix_id = "MJ557TYHSJD7NBBWTUXOMV";
+  -#   (function () {
+  -#   var oldonload = window.onload;
+  -#   window.onload = function(){
+  -#      __adroll_loaded=true;
+  -#      var scr = document.createElement("script");
+  -#      var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+  -#      scr.setAttribute('async', 'true');
+  -#      scr.type = "text/javascript";
+  -#      scr.src = host + "/j/roundtrip.js";
+  -#      ((document.getElementsByTagName('head') || [null])[0] ||
+  -#       document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+  -#      if(oldonload){oldonload()}};
+  -#   }());
 
 - else
   / GA Stub
