@@ -1,0 +1,11 @@
+development:
+  build: .
+  command: middleman server -p 4141
+  volumes:
+    - .:/myapp
+  ports:
+    - "4141:4141"
+  environment:
+    RACK_ENV: development
+    RAILS_ENV: development
+  
