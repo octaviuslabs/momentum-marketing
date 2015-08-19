@@ -81,6 +81,29 @@ html, body {
   }
 }
 
+.highlight-black{
+  background-color: #000000;
+  border-color: #000000;
+  .btn-theme {
+    background-color: #101010;
+    color: #fff;
+  }
+  .btn-theme:hover {
+    background-color: #f39c13;
+  }
+  .price {
+  	background-color: #101010;
+  	color: #fff;
+  	border-color: #1A1A1A;
+  }
+  ul.features {
+    color: #A5A5A5;
+    li {
+        border-bottom: 1px solid #1A1A1A;
+    }
+  }
+}
+
 .img-responsive {
   display: block;
   margin-left: auto;

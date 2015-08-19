@@ -5,20 +5,36 @@
     "pricing_dollars": "0",
     "pricing_cents": "00",
     "features": [
-      "Free for the <strong>first 30 DAYS</strong>",
-      "Same features as unlimited plan"
+      "All items in unlimited plan",
+      "Free for the <strong>first 30 DAYS</strong>"
     ]
   },
   "unlimited_forver": {
     "name": "Unlimited",
-    "id": "unlimited",
-    "pricing_dollars": "79",
-    "pricing_cents": "99",
+    "id": "unlimited_7500",
+    "pricing_dollars": "75",
+    "pricing_cents": "00",
     "features": [
+      "Access to the Vesper AI",
       "<strong>UNLIMITED</strong> recommendations",
       "<strong>UNLIMITED</strong> email templates",
-      "Send <strong>UNLIMITED</strong> emails",
-      "12 Hour support turnaround"
+      "Send <strong>UNLIMITED</strong> emails"
+    ]
+  },
+  "black": {
+    "name": "Black",
+    "id": "black",
+    "pricing_dollars": "1500",
+    "pricing_cents": "00",
+    "features": [
+      "All items in unlimited plan",
+      "<strong>Virtual Personal Assistant</strong>",
+      "Communicate Via Text",
+      "Communicate Via Email",
+      "<strong>UNLIMITED</strong> scheduling request",
+      "<strong>UNLIMITED</strong> concierge request",
+      "<strong>UNLIMITED</strong> research request",
+      "<strong>Limited to 100 members</strong>"
     ]
   }
 }
