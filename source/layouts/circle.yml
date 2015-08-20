@@ -1,0 +1,13 @@
+deployment:
+  staging:
+    branch: staging
+    commands:
+      - npm install -g divshot-cli
+      - middleman build
+      - divshot push staging --token $DIVSHOT_TOKEN
+  staging:
+    branch: master
+    commands:
+      - npm install -g divshot-cli
+      - middleman build
+      - divshot push production --token $DIVSHOT_TOKEN
