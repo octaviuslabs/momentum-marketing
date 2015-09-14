@@ -1,22 +1,27 @@
 %footer#footer
   .container
     .row
-      #footer_copyright.col-sm-12.text-center
+      #col-sm-12.text-center
         %p
-          Copyright 2014
-          = succeed "." do
-            %span
-              = link_to "octavius labs", "http://octaviuslabs.com"
+          = link_to "Sign In", "http://black.vesper.ai"
+          |
+          = link_to "See My Blog", "http://blog.vesper.ai"
+          |
+          = link_to "Follow Me On Twitter", "http://twitter.com/meetvesper"
+          |
+          = link_to "Read My Privacy Policy", "privacy_policy.html"
         %p
-          = link_to "Privacy Policy", "privacy_policy.html"
-          |
-          = link_to "Blog", "http://blog.vesper.ai"
-          |
-          = link_to "Request Invite", "index.html#get-started"
-    .row
-      #footer_socials.col-sm-12.text-center
-        #contact_icons
-          %ul.contact-socials.clearfix
-            %li
-              %a.foo_social.ico-twitter{:href => "http://twitter.com/meetvesper"}
-                %i.fa.fa-twitter
+          Copyright 2015
+          = link_to "octavius labs llc", "http://octaviuslabs.com"
+  = javascript_include_tag "all"
+  / /[if lt IE 9]
+  /   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  /   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  - if build?
+    - data.remote_keys.tracking_pixels.each do |pixel|
+      = image_tag pixel, height: "0", width: "0"
+    = javascript_include_tag "jquery.scrolldepth.min"
+    :javascript
+      jQuery(function() {
+        jQuery.scrollDepth();
+      });

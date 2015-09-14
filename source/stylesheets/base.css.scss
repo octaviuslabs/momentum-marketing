@@ -1,66 +1,8 @@
 @charset "utf-8";
-@import "theme_colors";
-@import "bootstrap.css";
-@import "font-awesome.min.css";
-@import "flexslider.css";
-@import "prettyPhoto.css";
-@import "owl.carousel.css";
-@import "animate.min.css";
-@import "style.css";
-@import "blue.css";
-@import "responsive.css";
-@import "typed_cursor.css";
-
-// $intro-image: "https://dl.dropboxusercontent.com/u/2935/stock_photos/542092041.jpg";
-// $intro-image: "https://dl.dropboxusercontent.com/u/2935/stock_photos/542092039.jpg";
-// $intro-image: "https://dl.dropboxusercontent.com/u/2935/stock_photos/549849807.jpg";
-// $intro-image: "https://dl.dropboxusercontent.com/u/2935/stock_photos/bag-and-hands.jpg";
-// $intro-image: "https://dl.dropboxusercontent.com/u/2935/stock_photos/unsplash-bonus.jpg";
-// $intro-image: "https://dl.dropboxusercontent.com/u/2935/stock_photos/bw-room.jpeg";
-$intro-image: "../images/backgrounds/coffee-cups-phone.jpg";
-$signup-image: "../images/backgrounds/faces.jpg";
-$section-padding: 80px;
-$width-breakpoint: "min-width: 768px";
-
-@mixin vertical-alignment{
-  @media ($width-breakpoint) {
-    display: flex;
-    align-items: center;
-  }
-}
-
-
-@mixin header-button($bg-color){
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  border-radius: 3px;
-  padding: 15px 30px;
-  border: 0;
-  margin: 5px;
-  background-color: $bg-color;
-  color: #fff;
-  line-height: inherit;
-  -webkit-transition: all ease 0.25s;
-  transition: all ease 0.25s;
-}
-
-@mixin card-width($width-percent) {
-  @media ($width-breakpoint) {
-    height: $width-percent;
-  }
-}
-
-@mixin full-screen {
-  @media ($width-breakpoint) {
-    height: 100%;
-  }
-}
-
-.vertical-align {
-  @include vertical-alignment;
-}
+@import '_bootstrap';
+$min-width: '700px';
+$min-width-breakpoint: 'min-width: ' + $min-width;
+$max-width-breakpoint: 'max-width: ' + $min-width;
 
 html, body {
     height:100%;
@@ -69,304 +11,57 @@ html, body {
     padding:0;
 }
 
-.navbar-header {
-  img{
-    height: 38px;
+@mixin full-screen {
+  @media ($min-width-breakpoint) {
+    height: 100%;
   }
 }
-
-.nav {
-  .highlight{
-    color: #f39c12;
-  }
+.spash-card {
+  padding-top: 10%;
 }
 
-.highlight-black{
-  background-color: #000000;
-  border-color: #000000;
-  .btn-theme {
-    background-color: #101010;
-    color: #fff;
-  }
-  .btn-theme:hover {
-    background-color: #f39c13;
-  }
-  .price {
-  	background-color: #101010;
-  	color: #fff;
-  	border-color: #1A1A1A;
-  }
-  ul.features {
-    color: #A5A5A5;
-    li {
-        border-bottom: 1px solid #1A1A1A;
-    }
-  }
+.accent {
+  color: #CFC65B;
 }
 
-.img-responsive {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
 }
 
-.privacy-policy {
-  padding-top: $section-padding;
-}
-
-
-.intro {
-  @include vertical-alignment;
-  @include card-width(100%);
-  background-color: #2c3e50;
-  color: #000000;
-  background: url($intro-image) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  #value-prop-typed {
-    text-transform: none;
-    font-size: 1.5em;
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    line-height: 1.1;
-    color: inherit;
-
-    h3 {
-      color: #000000;
-    }
-
-    small {
-      font-size: .75em;
-      color: #000000;
-    }
+.phone-body {
+  padding-top: 20px;
+  text-align: center;
+  img {
+    width: auto;
   }
-
-  .row {
-    padding-top: $section-padding;
-    text-align: center;
-  }
-}
-
-.overlay {
-  @include vertical-alignment;
-  @include full-screen;
-  background-image: url(../images/thumbs/overlay.png);
-  background-color: rgba(0, 0, 0, 0.70);
-  background-repeat: repeat;
-  height: 100%;
-}
-
-.how_it_works, #how_it_works {
-  .steps {
+  @media only screen and (max-device-width: 480px) {
     img {
-      width: auto;
-      max-height: 20em;
-    }
-    p {
-      font-size: 1em;
-      font-weight: normal;
-      padding-top: 1em;
-    }
-
-    h3 {
-      text-transform: uppercase;
-      padding-bottom: 10px;
-      color: #008ED6;
+      height: 325px;
     }
   }
-  .action {
-    padding-top: 1.5em;
-    text-align: center;
+  @media ($min-width-breakpoint) {
+    height: 100%;
+  }
+}
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+  font-weight: normal;
+}
+
+.logo {
+  height: 75px;
+  width: auto;
+  @media only screen and (max-device-width: 480px) {
+    height: 48px;
   }
 }
 
-.sub-intro {
-  @include card-width(33%);
-  @include vertical-alignment;
-  text-align: center;
-  background-color: #212121;
-  h1 {
-    font-size: 3em;
-    color: #ffffff;
-  }
-
-  h3 {
-    font-size: 1.7em;
-    font-weight: 100;
-    color: #ecf0f1;
-  }
-}
-
-.proof {
-  @include card-width(33%);
-  @include vertical-alignment;
-  background-color: #ecf0f1;
-  text-align: center;
-  padding: 3em 0em 3em 0em;
-  img {
-    max-height: 100px;
-    width: auto;
-    opacity: 0.4;
-    filter: alpha(opacity=40); /* For IE8 and earlier */
-  }
-
-  h4 {
-    font-style: italic;
-    color: #bdc3c7;
-  }
-}
-
-.tour {
-  @include vertical-alignment;
-  @include full-screen;
-  border-top: 1px solid #eee;
-  padding-top: 70px;
-  padding-bottom: 10px;
-  img {
-    width: auto;
-    max-height: 500px;
-  }
-}
-
-.white {
-  @extend .tour;
-  background-color: #ffffff;
-}
-
-.grey {
-  @extend .tour;
-  background-color: #f5f5f5;
-}
-
-.pricing {
-  @extend .tour;
-  height: auto;
-  background-color: #bdc3c7;
-  border-bottom: 1px solid #eee;
-
-  .price-col {
-    padding-bottom: 10px;
-  }
-}
-
-.header-button {
-  @include header-button(#27ae60);
-}
-
-.header-button-secondary {
-  @include header-button(#ffffff);
-  border: 1px solid #727272;
-  color: #323232;
-}
-
-.header-button-secondary-white {
-  @extend .header-button-secondary;
-  border: 1px solid #727272;
-  color: #ffffff;
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.5);
-}
-
-.header-button-secondary-white:hover {
-    border: 1px solid rgba(255,255,255,1);
-    color: #ffffff;
-}
-
-#signup {
-  .button-wrapper {
-    padding-top: 5px;
-  }
-}
-
-.signup-section {
-  @extend .tour;
-  background: url($signup-image) no-repeat center fixed;
-  background-attachment: fixed !important;
-  background-repeat: repeat;
-  background-position: 0 0;
-  padding-top: 80px;
-  padding-bottom: 40px;
-  color: #fff;
-  h1, h2, h3, h4, p{
-    text-align: center;
-  };
-}
-
-.signup-section h4 {
-  color: #ffffff;
-}
-
-.signup-section h2 {
-  color: #ffffff;
-  font-weight: 700;
-  margin-top: 15px;
-  margin-bottom: 40px;
-}
-
-.signup-section h3 {
-  color: #ffffff;
-}
-
-.signup-section .color-overlay {
-  padding-top: 125px;
-  padding-bottom: 125px;
-}
-
-
-.signup_form {
-  background-color: rgba(20, 20,20, 0.65);
+footer {
+  -moz-box-shadow:    inset 0 1px 5px #000000;
+  -webkit-box-shadow: inset 0 1px 5px #000000;
+  box-shadow:         inset 0 1px 5px #000000;
   padding: 20px;
-  width: 75%;
-
-  h1 {
-    padding-top: 10px;
-  }
-}
-
-.message {
-  h2 {
-    text-align: center;
-    color: #87D37C;
-  }
-}
-
-#signup form input[type="submit"] {
-  right: auto;
-  width: 100%;
-  @media ($width-breakpoint) {
-    width: 33%;
-  }
-  background-color: #f39c12;
-  border: 1px solid #f39c12;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 900;
-  text-transform: uppercase;
-  padding: 10px 15px;
-  -webkit-border-radius: 6px 6px 6px 6px;
-  -moz-border-radius: 6px 6px 6px 6px;
-  -o-border-radius: 6px 6px 6px 6px;
-  border-radius: 6px 6px 6px 6px;
-  -webkit-transition: all 350ms ease-in-out;
-  -moz-transition: all 350ms ease-in-out;
-  -o-transition: all 350ms ease-in-out;
-  -ms-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
-}
-
-#signup form input[type="submit"]:hover {
-  background-color: #f39c12;
-}
-
-.btn-theme {
-  background-color: $theme-blue-hex;
-}
-
-#scrollUp {
-  background-color: rgba(70, 171, 224, 0.85);
+  background-color: #1C1C1C;
 }

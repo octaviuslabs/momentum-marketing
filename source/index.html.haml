@@ -1,12 +1,13 @@
-= partial "layouts/header"
-= partial "intro"
-= partial "sub_intro"
-= partial "proof"
-= partial "how_it_works"
-- data.tour.sections.each_with_index do |section, i|
-  - if i%2 != 0
-    = partial "tour_section_right_image", locals: { section: section }
-  - else
-    = partial "tour_section_left_image", locals: { section: section }
-= partial "pricing"
-= partial "signup_email"
+.container
+  .spash-card
+    .row
+      .col-md-12.text-center
+        .div
+          = image_tag "images/vesper_logo.png", class: "logo"
+          %h1.accent I’m The World Class Aide For Dealmakers
+          %h1
+            .small Text Hello To Get Started
+            818.273.6358
+    .row.phone-body
+      .col-md-12
+        = image_tag "images/phone.png"
